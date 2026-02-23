@@ -2,4 +2,6 @@
 ** xref:development:common-apis-to-use.adoc[Common APIs]
 ** xref:development:reuse-code-and-components.adoc[Reuse Code and Components]
 ** xref:development:create-fully-responsive-apps.adoc[Responsive Applications]
+** xref:development:configure-static-app-urls.adoc[Static Application URLs]
+** xref:development:js-object-run-settings.adoc[JS Object Run Settings]
 ** xref:development:bonita-ui-builder-best-practices.adoc[Best Practices]

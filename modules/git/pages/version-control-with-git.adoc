@@ -20,6 +20,7 @@ image::git-version-control.png[]
 * **Version Control Integration:** Connect to any Git hosting provider of your choice.
 * **Branch Protection:** Protect a specific branch to ensure the integrity of your code base.
 * **Default Branch:** View your default branch.
+* **Branch Persistence:** Your selected Git branch is remembered across browser sessions, so you no longer need to switch back to it each time you reopen the editor.
 
 == Getting Started
 

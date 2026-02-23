@@ -1,0 +1,93 @@
+= JS Object run settings
+:description: Configure how JS Object functions run in Bonita UI Builder, including automatic (reactive) execution and on page unload actions.
+
+{description}
+
+* Difficulty: Beginner
+* Estimated time: 10 minutes
+* Prerequisites: Basic understanding of JS Objects in Bonita UI Builder
+
+Bonita UI Builder provides several run behaviors for JS Object functions, allowing you to control when and how your code executes.
+
+== Access function run settings
+
+To configure the run behavior of a JS Object function:
+
+. Open a JS Object in the editor.
+. Click on the function name in the left panel.
+. Use the *Function Settings* dropdown to select the desired run behavior.
+
+== Automatic (Reactive) actions
+
+When a function is set to run automatically, it re-executes whenever its dependencies change. This works like a spreadsheet formula: if an input value that the function depends on changes, the function runs again with the updated value.
+
+=== Example
+
+Consider a query that fetches a filtered list of items based on a search input:
+
+[source,JS]
+----
+export default {
+  fetchFilteredItems() {
+    // This query depends on SearchInput.text
+    // When SearchInput changes, the query re-runs automatically
+    return fetch(`/API/bdm/businessData/com.company.model.Item?q=find&c=10&p=0&f=name=${SearchInput.text}`);
+  }
+}
+----
+
+When configured as an automatic action, `fetchFilteredItems` re-runs every time the user types in the `SearchInput` widget, keeping the displayed data in sync with the search criteria.
+
+[TIP]
+====
+Automatic actions are useful when you want the UI to stay reactive without requiring explicit button clicks or manual triggers.
+====
+
+== On page unload
+
+JS Object functions can be configured to execute when the user navigates away from the current page. This is useful for cleanup tasks or saving state before the user leaves.
+
+=== Use cases
+
+* **Save unsaved data**: Persist form data or user progress before navigation.
+* **Cleanup**: Release resources or reset temporary state.
+* **Analytics**: Track page exit events or time spent on a page.
+
+=== Example
+
+[source,JS]
+----
+export default {
+  onPageLeave() {
+    // Save the current form state before the user navigates away
+    storeValue('draftForm', {
+      name: NameInput.text,
+      description: DescriptionInput.text
+    });
+  }
+}
+----
+
+[WARNING]
+====
+On page unload functions should complete quickly. Long-running operations may not finish before the page transition occurs.
+====
+
+== Summary of run behaviors
+
+[cols="1,2"]
+|===
+| Run behavior | Description
+
+| *Manual*
+| The function runs only when explicitly triggered (e.g., by a button click).
+
+| *On page load*
+| The function runs once when the page loads.
+
+| *Automatic (Reactive)*
+| The function re-runs whenever its dependencies change.
+
+| *On page unload*
+| The function runs when the user navigates away from the page.
+|===

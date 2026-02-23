@@ -2,6 +2,38 @@
 :description: This is the release notes for Bonita UI Builder
 :page-aliases: 2024.3@bonita:applications:ui-builder/ui-builder-release-notes.adoc
 
+== UI Builder 1.3.10 (2026-XX-XX)
+
+== UI Builder 1.3.9 (2026-02-19)
+
+=== New features
+
+* Add xref:ui-builder/ui-builder-docker-installation.adoc[configuration internal port] (`UIB_INTERNAL_PORT`) to allow
+deployment on platforms where a sidecar proxy occupies port 80 (e.g., Kubernetes with Istio or Linkerd)
+
+=== Bug fixes
+
+* Fix "Save into project" action exporting applications
+
+== UI Builder 1.3.8 (2026-02-12)
+
+* Fixed an issue in production mode that prevented importing applications via the API, introduced in version 1.3.7.
+
+
+== UI Builder 1.3.7 (2026-02-09)
+
+* Upgrade Appsmith from 1.93 to v1.95
+* BPA-296: Restore "Custom" widget in the widget list after a regression in 1.3.6 version
+* BPA-292: Fix memory leak caused by HTTP client instances not being released, which could lead to Out-Of-Memory errors on long-running pods
+
+=== Two new UI Builder Rest API for managing applications
+
+In this release we are adding a two new xref:deployment:rest-api.adoc[REST API], that lets you automatize some UI Builder actions with HTTP requests:
+
+* Delete single application
+* Update an application
+
+
 == UI Builder 1.3.6 (2026-01-30)
 
 * Upgrade Appsmith from v1.90 to v1.93

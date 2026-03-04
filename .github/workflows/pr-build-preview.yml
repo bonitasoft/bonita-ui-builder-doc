@@ -13,3 +13,4 @@ jobs:
     secrets: inherit
     with:
       component-name: ui-builder
+      doc-site-branch: 'feat/create_uib_documentation'

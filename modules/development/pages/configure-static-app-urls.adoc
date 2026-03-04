@@ -40,6 +40,8 @@ To set a custom slug for your application:
 . Enter a slug for your application in the *Application slug* field.
 +
 The slug must be lowercase and can contain only letters, numbers, and hyphens. Bonita UI Builder checks that the slug is available across all applications in the workspace.
++
+image::static-urls/configure-app-static-url.png[Configure static URL for an application, 800]
 
 [NOTE]
 ====
@@ -53,6 +55,8 @@ Once static URLs are enabled for the application, you can set custom slugs for e
 . In the editor, navigate to the page you want to configure.
 . Click the page name in the left panel and open the page settings.
 . Enter a custom slug in the *Page slug* field.
++
+image::static-urls/configure-page-static-url.png[Configure static URL for a page, 800]
 
 Each page slug must be unique within the application.
 

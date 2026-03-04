@@ -1,5 +1,5 @@
 = Resources
-:page-aliases: 2024.3@bonita:applications:ui-builder/resources.adoc
+:page-aliases: 2024.3@bonita:applications:ui-builder/resources.adoc, 2025.1@bonita:applications:ui-builder/resources.adoc, 2025.2@bonita:applications:ui-builder/resources.adoc
 :description: Here, you'll find a curated collection of references to help you maximize your productivity and enhance your understanding of Bonita UI Builder.
 
 {description}

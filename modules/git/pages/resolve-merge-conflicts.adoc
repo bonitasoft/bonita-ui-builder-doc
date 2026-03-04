@@ -1,5 +1,5 @@
 = Resolve merge conflicts in Git
-:page-aliases: 2024.3@bonita:applications:ui-builder/version-control-with-git/resolve-merge-conflicts.adoc
+:page-aliases: 2024.3@bonita:applications:ui-builder/version-control-with-git/resolve-merge-conflicts.adoc, 2025.1@bonita:applications:ui-builder/version-control-with-git/resolve-merge-conflicts.adoc, 2025.2@bonita:applications:ui-builder/version-control-with-git/resolve-merge-conflicts.adoc
 :description: This guide provides techniques for resolving merge conflicts to facilitate smoother collaboration and effective project management in Git.
 
 {description}

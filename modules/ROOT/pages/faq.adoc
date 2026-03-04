@@ -1,5 +1,5 @@
 = FAQ
-:page-aliases: 2024.3@bonita:applications:ui-builder/faq.adoc
+:page-aliases: 2024.3@bonita:applications:ui-builder/faq.adoc, 2025.1@bonita:applications:ui-builder/faq.adoc, 2025.2@bonita:applications:ui-builder/faq.adoc
 :description: Here you can find answers to your questions about Bonita UI Builder.
 
 {description}

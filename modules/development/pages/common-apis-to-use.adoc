@@ -1,5 +1,5 @@
 = Common APIs to use
-:page-aliases: 2024.3@bonita:applications:ui-builder/common-apis-to-use.adoc
+:page-aliases: 2024.3@bonita:applications:ui-builder/common-apis-to-use.adoc, 2025.1@bonita:applications:ui-builder/common-apis-to-use.adoc, 2025.2@bonita:applications:ui-builder/common-apis-to-use.adoc
 :description: Discover frequently used Bonita APIs to efficiently build complex applications in the UI Builder.
 
 {description}

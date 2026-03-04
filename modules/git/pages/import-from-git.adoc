@@ -1,5 +1,5 @@
 = Import applications from Git
-:page-aliases: 2024.3@bonita:applications:ui-builder/version-control-with-git/import-from-git.adoc
+:page-aliases: 2024.3@bonita:applications:ui-builder/version-control-with-git/import-from-git.adoc, 2025.1@bonita:applications:ui-builder/version-control-with-git/import-from-git.adoc, 2025.2@bonita:applications:ui-builder/version-control-with-git/import-from-git.adoc
 :description: Learn how to import an existing application from a Git repository into another Bonita UI Builder account. This process allows you to manage multiple instances of the same application for tasks such as feature development, testing, and deployment.
 
 {description}

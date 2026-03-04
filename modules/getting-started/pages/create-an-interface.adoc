@@ -1,5 +1,5 @@
 = Create an interface
-:page-aliases: 2024.3@bonita:applications:ui-builder/create-an-interface.adoc
+:page-aliases: 2024.3@bonita:applications:ui-builder/create-an-interface.adoc, 2025.1@bonita:applications:ui-builder/create-an-interface.adoc, 2025.2@bonita:applications:ui-builder/create-an-interface.adoc
 :description: Once you have downloaded and launched Bonita UI Builder, it's time to create an interface.
 
 {description}

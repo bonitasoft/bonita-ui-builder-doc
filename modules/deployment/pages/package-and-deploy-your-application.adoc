@@ -1,5 +1,5 @@
 = Package and deploy your application
-:page-aliases: 2024.3@bonita:applications:ui-builder/package-and-deploy-your-application.adoc
+:page-aliases: 2024.3@bonita:applications:ui-builder/package-and-deploy-your-application.adoc, 2025.1@bonita:applications:ui-builder/package-and-deploy-your-application.adoc, 2025.2@bonita:applications:ui-builder/package-and-deploy-your-application.adoc
 :description: Step-by-step guide to transition from development to production using Bonita UI Builder
 
 

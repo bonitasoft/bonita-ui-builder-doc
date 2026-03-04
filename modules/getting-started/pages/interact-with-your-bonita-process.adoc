@@ -8,18 +8,15 @@
 == Prerequisites
 * Bonita UI Builder downloaded and launched
 * Bonita Studio version 2024.3 or any later version
-* A running Bonita project with a defined process diagram, BDM, and contract. Follow the
-xref:@bonita:getting-started:getting-started-index.adoc[Getting Started tutorial] if you need any help
+* A running Bonita project with a defined process diagram, BDM, and contract. Follow the xref:@bonita:getting-started:getting-started-index.adoc[Getting Started tutorial] if you need any help
 
 
 == Interact with Bonita API
-You can interact with the Bonita runtime using the xref:@bonita:api:rest-api-overview.adoc[REST APIs] through the
-default "Bonita API" datasource.
+You can interact with the Bonita runtime using the xref:@bonita:api:rest-api-overview.adoc[REST APIs] through the default "Bonita API" datasource.
 
 == Create Bonita API requests
 
-You can create API requests and interact with the Bonita runtime with the xref:@bonita:api:rest-api-overview.adoc[REST
-APIs].
+You can create API requests and interact with the Bonita runtime with the xref:@bonita:api:rest-api-overview.adoc[REST APIs].
 We will describe below how you can, for example, get a list of Bonita processes, and instantiate one of them.
 
 === Get a list of processes
@@ -73,9 +70,7 @@ This API will instantiate the first process returned by `getProcess` with the `b
 [NOTE]
 ====
 In Bonita, you need to refer to your contract to instantiate a process.
-Here, we used the contract defined in the Getting Started tutorial as an example: `description` is a mandatory input
-for the `claimInput` xref:@bonita:getting-started:declare-contracts.adoc[contract], and `description` will take as
-value what is typed in the `Input1` widget of the form.
+Here, we used the contract defined in the Getting Started tutorial as an example: `description` is a mandatory input for the `claimInput` xref:@bonita:getting-started:declare-contracts.adoc[contract], and `description` will take as value what is typed in the `Input1` widget of the form.
 ====
 
 Now, we need to tell the form to execute this API request after clicking the `submit` button.

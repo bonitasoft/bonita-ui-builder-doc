@@ -11,7 +11,7 @@ For Subscription editions only.
 
 == Prerequisites
 * Docker installed.
-* {bonitaVersion} Bonita (or any later version) started on your local machine.
+* 2024.3 Bonita (or any later version) started on your local machine.
 
 To use Bonita UI Builder, a Bonita runtime running on your local machine is required (it may be a Bonita Studio or a standalone Bonita runtime). Make sure no firewall is blocking the connection between Bonita UI Builder and Bonita Runtime.
 
@@ -27,7 +27,7 @@ First, create a `docker-compose.yml` file with the content below:
 
 [source,docker,subs="+macros,+attributes"]
 ----
-include::example$docker-compose.yml[]
+include::example$ui-builder/development/docker-compose.yml[]
 ----
 
 If Bonita is running on a port other than 8080, you need to override the `BONITA_PORT` xref:ui-builder-docker-installation.adoc#environment-variables[environment variable] in the `bonita-ui-proxy` service within the `docker-compose.yml` file.
@@ -83,7 +83,7 @@ docker compose restart
 
 [TIP]
 ====
-If encountering issues with Windows and WSL, check our xref:ROOT:faq.adoc#WSLissue[FAQ] .
+If encountering issues with Windows and WSL, check our xref:faq.adoc#WSLissue[FAQ] .
 ====
 
 == Log in on Bonita UI Builder

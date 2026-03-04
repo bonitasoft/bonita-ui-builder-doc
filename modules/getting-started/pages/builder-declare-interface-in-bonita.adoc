@@ -6,8 +6,7 @@
 
 == Declare the interface in Bonita application descriptor
 
-The xref:@bonita:application-creation.adoc[Bonita application descriptor] is a file that let you describe all your
-applications.
+The xref:@bonita:applications:ui-designer/application-creation.adoc[Bonita application descriptor] is a file that let you describe all your applications.
 
 To declare a Bonita UI Builder interface in it, edit it in Studio using the `source` tab.
 In this tab, you will be able to declare your application built and packaged with Bonita UI Builder, using auto-completion with an `applicationLink` XML tag.
@@ -25,9 +24,7 @@ In this example, the _General Overview_ application is declared with the tag:
 
 There are fewer properties to set for an application link than for a legacy application, but the `displayName` is still mandatory.
 
-The `token` property's value must be identical to the value of the `slug` key found in the
-xref:deployment:package-and-deploy-your-application.adoc#export-application[JSON export of your application]. For example, if
-your application name is __Awesome application__, its `slug` should be __awesome-application__.
+The `token` property's value must be identical to the value of the `slug` key found in the xref:deployment:package-and-deploy-your-application.adoc#export-application[JSON export of your application]. For example, if your application name is __Awesome application__, its `slug` should be __awesome-application__.
 
 [WARNING]
 ====

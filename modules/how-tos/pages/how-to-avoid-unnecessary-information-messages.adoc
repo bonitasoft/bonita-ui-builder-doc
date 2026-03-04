@@ -12,7 +12,7 @@ Imagine you are importing a page into an existing application and Bonita UI Buil
 
 == Concerning the Queries
 
-image::partially-imported.png[partially-imported]
+image:partially-imported.png[partially-imported]
 
 To resolve this:
 
@@ -21,7 +21,7 @@ To resolve this:
  * Enable the "Run API on page load" option
  * Refresh your browser
 
-image::run-on-page-load.png[run-on-page-load]
+image:run-on-page-load.png[run-on-page-load]
 
 This will resolve the issue if it was caused by queries that were supposed to be executed on a page load.
 
@@ -35,7 +35,7 @@ If you encounter similar errors or warnings related to JavaScript functions duri
  * Enable the "Run on page load" option for the affected JS function
  * Refresh your browser
 
-image::run-js-on-page-load.png[run-js-on-page-load]
+image:run-js-on-page-load.png[run-js-on-page-load]
 
 [NOTE]
 ====

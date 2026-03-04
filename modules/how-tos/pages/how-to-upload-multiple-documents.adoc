@@ -17,7 +17,7 @@ Suppose you want to upload multiple files at the same time using a `FilePicker` 
 === 1. Use a FilePicker widget
 To do so, drag and drop a `FilePicker` widget onto your interface and configure it as follows:
 
-image::file-picker-widget-properties.png[file-picker-widget-propeties]
+image:file-picker-widget-properties.png[file-picker-widget-propeties]
 
 [WARNING]
 ====
@@ -32,7 +32,7 @@ In this example, we don't set a limit for the `Max no. of files` because we're a
 === 2. Create a file upload Post request
 * Go to `Queries` section and create a new query/API and configure it as follows:
 
-image::query-formFileUpload.png[query-formFileUpload]
+image:query-formFileUpload.png[query-formFileUpload]
 
 
 === 3. Create JavaScript object
@@ -92,4 +92,4 @@ You can modify the file count according to your preferences.
 
 * Go to the `UI` and select `testFileUpload` widget and bind the `uploadFile` function to the `onFilesSelected` event.
 
-image::bind-file-upload.png[bind-file-upload]
+image:bind-file-upload.png[bind-file-upload]

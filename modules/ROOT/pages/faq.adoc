@@ -19,8 +19,7 @@ Bonita UI Builder is available by default and for no additional cost in all http
 
 === How to use?
 [subs=+macros]
-Please refer to the xref:getting-started:initiation-manual.adoc[initiation manual]. If you have any other additional questions,
-reach out to our {cscRootUrl}[Support team].
+Please refer to the xref:getting-started:initiation-manual.adoc[initiation manual]. If you have any other additional questions, reach out to our {cscRootUrl}[Support team].
 
 
 === What are the system requirements?
@@ -28,9 +27,7 @@ Your system/server should have the following configuration for optimal performan
 
 
 === What does it mean for my workflows?
-There should be no change in your logic, continuous integration, and workflows. You can still manage them the way
-you’re managing them today. Just download the docker image and follow the xref:getting-started:initiation-manual.adoc[initiation
-manual].
+There should be no change in your logic, continuous integration, and workflows. You can still manage them the way you’re managing them today. Just download the docker image and follow the xref:getting-started:initiation-manual.adoc[initiation manual].
 
 
 === What does it mean for my existing forms and pages?
@@ -39,16 +36,14 @@ Your existing forms and pages will always be compatible with Bonita. It is also 
 Eventually, Bonita UI Designer will be phased out as we fully transition to Bonita UI Builder. Our goal is to make this transition as smooth as possible, minimizing any disruption to your workflow:
 
 * Continued access: Bonita UI Designer will remain fully operational for an extended period, allowing ample time for adaptation.
-* Support and resources: We offer extensive documentation, tutorials, and support to help you make the most of
-xref:index.adoc[Bonita UI Builder]
+* Support and resources: We offer extensive documentation, tutorials, and support to help you make the most of xref:index.adoc[Bonita UI Builder]
 * Facilitated transition: We are dedicated to facilitating the transition, with detailed guides on how to use Bonita UI Builder, as well as https://www.bonitasoft.com/professional-services/on-demand-services[professional services support]
 
 
 === Can I expect any support from Bonitasoft?
 Yes, you can!
 
-* Support and resources: We offer extensive documentation, tutorials, and support to help you make the most of
-xref:index.adoc[Bonita UI Builder].
+* Support and resources: We offer extensive documentation, tutorials, and support to help you make the most of xref:index.adoc[Bonita UI Builder].
 * Facilitated transition: We are dedicated to facilitating the transition, with detailed guides on how to use Bonita UI Builder, as well as https://www.bonitasoft.com/professional-services/on-demand-services[professional services support].
 
 
@@ -174,15 +169,11 @@ No, the local Bonita UI Builder server is mono-user, meaning it only supports on
 
 
 === Can I use fragments?
-While Bonita UI Builder does not natively support creating reusable components for process forms or UI elements
-(previously known as fragments), there are still xref:development:reuse-code-and-components.adoc[many workarounds] you can use
-to improve reusability, maintenance, and consistency between your pages and applications.
+While Bonita UI Builder does not natively support creating reusable components for process forms or UI elements (previously known as fragments), there are still xref:development:reuse-code-and-components.adoc[many workarounds] you can use to improve reusability, maintenance, and consistency between your pages and applications.
 
 
 === How can I interact with my tasks?
-While Bonita UI Builder does not yet support automatic form creation from contract data, you can still easily
-interact with your tasks, processes, and data. Follow our xref:how-tos:how-to-interact-with-tasks.adoc[dedicated guide] to
-learn more.
+While Bonita UI Builder does not yet support automatic form creation from contract data, you can still easily interact with your tasks, processes, and data. Follow our xref:how-tos:how-to-interact-with-tasks.adoc[dedicated guide] to learn more.
 
 
 [.troubleshooting-title]
@@ -206,9 +197,7 @@ In that case, the Application Directory opened from that application only will n
 [.solution]#Solution#
 Fix this by using `custompage_layoutBonita` as the layout value, which will automatically migrate to the latest layout.
 
-You may also encounter this issue if you use a xref:@bonita:applications:ui-designer/customize-layouts.adoc[customized
-layout]
-instead of the official one. In that case, update your application's layout by re-applying your modifications to the latest layout version that implements the improvements for Application Links.
+You may also encounter this issue if you use a xref:@bonita:applications:ui-designer/customize-layouts.adoc[customized layout] instead of the official one. In that case, update your application's layout by re-applying your modifications to the latest layout version that implements the improvements for Application Links.
 
 The same applies to the Application directory page used in the default application directory app: if you use a customized version of it, you need to re-apply your changes on the latest version packaged with Bonita runtime.
 --

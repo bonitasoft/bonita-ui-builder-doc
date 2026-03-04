@@ -12,12 +12,12 @@ This can be done by creating a JavaScript function that constructs the URL for t
 
 == Example
 
-image::user-list.png[user-list]
+image:user-list.png[user-list]
 
 === 1. Create an API query
 * Navigate to the `Queries` section, create a new query/API, name it `getUsers` and configure as shown in the image below:
 
-image::query-get-users.png[query-get-users]
+image:query-get-users.png[query-get-users]
 
 The `getUsers` query returns a list of users that includes an image path for an avatar icon if available; otherwise, it provides a default user image icon.
 
@@ -47,12 +47,12 @@ It appends the icon path to the `/bonita/portal-theme/` directory on the server.
 * Navigate to the `UI` section, drag and drop a text widget onto the interface, and set its text to 'Users'.
 * Next, drag and drop a `list` widget onto the interface and bind it to the `getUsers` query that was created earlier:
 
-image::user-list-widget.png[user-list-widget]
+image:user-list-widget.png[user-list-widget]
 
 * Since the list widget by default includes text widgets and an image widget for each list item, we will use these default widgets to bind the list items.
 * Select a text widget and bind it to the `firstname` of a user in the list. For instance, use `First name {{ currentItem.firstname }}`:
 
-image::firstname.png[firstname]
+image:firstname.png[firstname]
 
 * Similarly, bind the `lastname` and `username` to the other text widgets.
 For example use `Last name {{ currentItem.lastname }}` and `Username {{ currentItem.username }}`.
@@ -60,7 +60,7 @@ For example use `Last name {{ currentItem.lastname }}` and `Username {{ currentI
 * Now, select the image widget and call the JavaScript function created previously to bind it to the user's avatar icon.
 For example, user `{{ userAvatar.getIconFullURL(currentItem.icon) }}`:
 
-image::user-avatar.png[user-avatar]
+image:user-avatar.png[user-avatar]
 
 [NOTE]
 ====

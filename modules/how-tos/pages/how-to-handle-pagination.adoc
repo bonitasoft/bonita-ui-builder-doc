@@ -14,7 +14,7 @@ Follow this 3-steps tutorial to know how.
 
 Let's create an interface where a user types something in an input widget, and then it filters the API’s results and automatically adapts the pagination of a list widget.
 
-
+  
 == 1. Create a JS object
 
 Go to the `JS` tab (between `Queries` and `UI`), create a new JS object called “Pagination” and copy/paste the following code:
@@ -52,14 +52,14 @@ On the interface, drag and drop an input widget (rename it `UserFilterInput`) an
 
 Configure the input widget:
 
-image::pagination-input-widget.png[pagination-input-widget]
+image:pagination-input-widget.png[pagination-input-widget]
 
-
+  
 Configure the list widget:
 
-image::pagination-list-widget.png[pagination-list-widget]
+image:pagination-list-widget.png[pagination-list-widget]
 
 
 Drag and drop widgets within the list widget and configure them. For example, it could be text widgets where the text = `{{currentItem.userName}}` or `{{currentItem.job_title}}`
 
-Click the preview button and enjoy!
+Click the preview button and enjoy! 

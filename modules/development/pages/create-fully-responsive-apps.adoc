@@ -28,9 +28,9 @@ For some widgets, for example the Container widget, you can use the `Scroll cont
 
 Preview the page and resize the window: you will see that the content is truncated when the window is small:
 
-image::responsive-container-ko.png[responsive-container-ko, 400, 200]
+image:responsive-container-ko.png[responsive-container-ko, 400, 200]
 
 Now, set the `Height` property of the Container to `Auto Height` and preview the page again:
 you will see that the content is displayed correctly, the Container height adapts to the content:
 
-image::responsive-container-ok.png[responsive-container-ok, 400, 200]
+image:responsive-container-ok.png[responsive-container-ok, 400, 200]

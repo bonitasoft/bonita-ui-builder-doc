@@ -76,6 +76,6 @@ such as JS objects, databases, queries, custom libraries, widgets.
 To do so, go to your Bonita UI Builder app, click the page name in the top left corner,
 then click the `...` icon next to your page name and select `Export` or `Import`:
 
-image::export_pages.png[export_pages]
+image:export_pages.png[export_pages]
 
 Also, please note that Bonita UI Builder's drag and drop interface allows you to select multiple widgets at once (when holding down the left mouse button) and duplicate them between pages.

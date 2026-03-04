@@ -84,7 +84,7 @@ To do that, you can use the following `docker-compose.yml` file as a starting po
 
 [source,docker,subs="+macros,+attributes"]
 ----
-include::example$production/docker-compose.yml[]
+include::examples$production/docker-compose.yml[]
 ----
 
 Your applications will then be accessible at `+http://localhost+` or `+http://YOUR_PUBLIC_IP_ADDRESS+`.
@@ -92,8 +92,7 @@ Your applications will then be accessible at `+http://localhost+` or `+http://YO
 
 === Configure and manage Bonita healthcheck settings in a production environment
 
-The xref:@bonita:runtime:healthcheck-mechanism.adoc[Bonita healthcheck] is a mechanism used to monitor the health and
-availability of Bonita services in production environments.
+The xref:@bonita:runtime:healthcheck-mechanism.adoc[Bonita healthcheck] is a mechanism used to monitor the health and availability of Bonita services in production environments.
 It periodically checks the status of these services to ensure they are functioning properly, helping to identify issues early and maintain system stability.
 
 Changing the default credentials for the healthcheck is crucial for security.
@@ -123,8 +122,7 @@ By following these steps, you can effectively configure Bonita's healthcheck to 
 
 === Customize your bonita-ui-builder image
 
-You can override and configure all xref:installation:ui-builder-docker-installation.adoc#environment-variables[environment
-variables].
+You can override and configure all xref:installation:ui-builder-docker-installation.adoc#environment-variables[environment variables].
 
 
 [NOTE]

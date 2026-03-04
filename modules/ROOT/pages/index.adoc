@@ -59,9 +59,7 @@ If you have already subscribed to a Scale plan or purchased the UI Builder add-o
 
 [.card.card-index]
 --
-xref:index.adoc[[.card-title]#Initiation manual# [.card-body
-.card-content-overflow]#pass:q[Steps to
-download and use Bonita UI Builder]#]
+xref:getting-started:initiation-manual.adoc[[.card-title]#Initiation manual# [.card-body.card-content-overflow]#pass:q[Steps to download and use Bonita UI Builder]#]
 --
 
 [.card.card-index]

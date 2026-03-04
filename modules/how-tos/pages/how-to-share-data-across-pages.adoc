@@ -14,7 +14,7 @@ Let’s say you want to send parameters to another page using what was typed in 
 
 To do so, drag and drop a text widget and a button widget. The button widget should be configured like this:
 
-image::configure-query-params.png[configure-query-params]
+image:configure-query-params.png[configure-query-params]
 
 
 The `navigate to` function will redirect to the chosen page. The query params will be passed between the source and the target page's URL: `your-application/target-page/edit?xx=value`
@@ -34,7 +34,7 @@ Here, `email` is the key where the value is stored, and `input1.text` is the val
 
 Once done, retrieve stored data using `{{appsmith.store.email}}` in your queries and other widgets.
 
-Instead of writing code, you can also store data from the widget's settings, see our xref:how-to-control-visibility-of-widgets.adoc#store-value[other guide] for more details.
+Instead of writing code, you can also store data from the widget's settings, see our xref:how-to-control-visibility-of-widgets.adoc#_using_the_storevalue_function[other guide] for more details.
 
 Please note that you can use the `clearStore()` function which clears all the data that was stored in the local storage of the browser, as well as the `removeValue()` function which clears the value associated with a specified key.
 

@@ -8,7 +8,6 @@
 * Estimated time: 15 minutes
 * Prerequisites: Basic understanding of Git
 
-[#git-settings-overview]
 == Access to Git settings from your user profile
 
 To access Git settings from your user profile, go to the home page, click on your profile icon in the top bar, select **Edit profile**, and then select **Git user config**.
@@ -37,7 +36,6 @@ In this section, you can change the name and email associated with the git autho
 
 This section contains critical Git settings, such as disabling auto-commit or disconnecting Git from the Bonita UI Builder.
 
-[#disable_auto-commit]
 ===== Disable Auto-Commit
 
 The Auto Commit feature in Bonita UI Builder ensures that changes related to version upgrades are automatically committed. When enabled, it performs the following actions:

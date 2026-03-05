@@ -19,7 +19,9 @@ Bonita UI Builder is available by default and for no additional cost in all http
 
 === How to use?
 [subs=+macros]
-Please refer to the xref:getting-started:initiation-manual.adoc[initiation manual]. If you have any other additional questions, reach out to our {cscRootUrl}[Support team].
+You can easily test a xref:development:development-instance-from-studio.adoc[Development instance from Studio]. +
+Please refer to the xref:getting-started:[initiation manual] for more general use cases. If you have any other 
+additional questions, reach out to our {cscRootUrl}[Support team].
 
 
 === What are the system requirements?

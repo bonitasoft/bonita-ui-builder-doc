@@ -55,7 +55,7 @@ docker login {bonitasoft-registry}
 [NOTE]
 ====
 *macOS users*: If you plan to launch UI Builder from Bonita Studio, additional Keychain configuration is required.
-See the xref:bonita@software-extensibility:bonita-repository-access.adoc#docker-configuration[macOS specific
+See the xref:bonita:software-extensibility:bonita-repository-access.adoc#docker-configuration[macOS specific
 configuration] section.
 ====
 
@@ -90,7 +90,7 @@ docker compose restart
 
 [TIP]
 ====
-If encountering issues with Windows and WSL, check our xref::faq.adoc#WSLissue[FAQ] .
+If encountering issues with Windows and WSL, check our xref:ROOT:faq.adoc#WSLissue[FAQ] .
 ====
 
 == Log in on Bonita UI Builder

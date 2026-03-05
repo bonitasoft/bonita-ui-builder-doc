@@ -58,6 +58,8 @@ In this release we are adding a two new xref:deployment:rest-api.adoc[REST API],
 * Add to Table widget the capability to configure which column is resizable automatically to adapt the width to its content. Before this, only the last column take the free space of the widget.
 * Fix issue about the flow of delete applications then import application.
 
+// use in bonita-doc
+[#release-uib-integration]
 == UI Builder 1.3.3 (2025-10-28)
 
 * Upgrade Appsmith from 1.85 to v1.89

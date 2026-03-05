@@ -2,6 +2,7 @@
 ** xref:how-tos:how-to-configure-https.adoc[Configure HTTPS]
 ** xref:how-tos:how-to-interact-with-tasks.adoc[Interact with Tasks]
 ** xref:how-tos:how-to-handle-document.adoc[Handle Documents]
+** xref:how-tos:how-to-manage-bdm-data.adoc[Manage BDM Data]
 ** xref:how-tos:how-to-upload-multiple-documents.adoc[Upload Multiple Documents]
 ** xref:how-tos:how-to-handle-pagination.adoc[Handle Pagination]
 ** xref:how-tos:how-to-handle-queries-dependency.adoc[Handle Query Dependencies]

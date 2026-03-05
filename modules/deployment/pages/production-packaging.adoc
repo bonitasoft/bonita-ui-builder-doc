@@ -84,7 +84,7 @@ To do that, you can use the following `docker-compose.yml` file as a starting po
 
 [source,docker,subs="+macros,+attributes"]
 ----
-include::examples$docker-compose.yml[]
+include::example$production/docker-compose.yml[]
 ----
 
 Your applications will then be accessible at `+http://localhost+` or `+http://YOUR_PUBLIC_IP_ADDRESS+`.

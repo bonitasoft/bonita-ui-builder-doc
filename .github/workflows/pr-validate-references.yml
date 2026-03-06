@@ -9,9 +9,8 @@ on:
 
 jobs:
   validate_xref:
-    uses: bonitasoft/bonita-documentation-site/.github/workflows/_reusable_pr-validate-references.yml@feat/create_uib_documentation
+    uses: bonitasoft/bonita-documentation-site/.github/workflows/_reusable_pr-validate-references.yml@master
     secrets: inherit
     with:
       component-name: ui-builder
-      doc-site-branch: 'feat/create_uib_documentation'
       fail-on-warning: true

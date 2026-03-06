@@ -10,6 +10,11 @@
 ** xref:how-to-create-editable-tables.adoc[create an editable table]
 ** xref:how-to-upload-multiple-documents.adoc[perform file upload]
 
+[NOTE]
+====
+This guide relies on features available starting from Bonita *2025.1*.
+====
+
 == Context
 
 Bonita 2025.1 introduces {openApiUrl}/{openApiLatestVersion}#tag/Business-Data-Operations[new APIs to create, update, delete and import referential Business Data]. +

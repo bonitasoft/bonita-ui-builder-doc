@@ -1,4 +1,4 @@
 * xref:release-notes.adoc[Release Notes]
-* xref:bonita-ui-builder.adoc[Overview]
+* xref:index.adoc[Overview]
 * xref:faq.adoc[FAQ]
 * xref:resources.adoc[Resources]

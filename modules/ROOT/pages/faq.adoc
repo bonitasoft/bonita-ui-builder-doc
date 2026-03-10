@@ -1,5 +1,4 @@
 = FAQ
-:page-aliases: ROOT:faq.adoc
 :description: Here you can find answers to your questions about Bonita UI Builder.
 
 {description}

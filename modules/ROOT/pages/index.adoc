@@ -1,5 +1,5 @@
 = Applications with Bonita UI Builder
-:page-aliases: 2024.3@bonita:applications:ui-builder/bonita-ui-builder.adoc, @bonita:applications:initiation-manual.adoc, 2025.1@bonita:applications:ui-builder/bonita-ui-builder.adoc, 2025.2@bonita:applications:ui-builder/bonita-ui-builder.adoc
+:page-aliases: ROOT:bonita-ui-builder.adoc
 :description: On this page, you will learn more about Bonita UI Builder and Applications.
 
 {description}

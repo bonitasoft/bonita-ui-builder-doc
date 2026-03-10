@@ -1,5 +1,5 @@
 = How to manage referential BDM Data
-:page-aliases: 2025.1@@bonita:applications:ui-builder/how-to-manage-bdm-data.adoc, 2025.2@@bonita:applications:ui-builder/how-to-manage-bdm-data.adoc
+:page-aliases: ROOT:how-to-manage-bdm-data.adoc
 :description: Learn how you can create, edit, delete referential Business Data and bulk import data.
 
 {description}

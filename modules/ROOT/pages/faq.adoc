@@ -1,5 +1,5 @@
 = FAQ
-:page-aliases: 2024.3@bonita:applications:ui-builder/faq.adoc, 2025.1@bonita:applications:ui-builder/faq.adoc, 2025.2@bonita:applications:ui-builder/faq.adoc
+:page-aliases: ROOT:faq.adoc
 :description: Here you can find answers to your questions about Bonita UI Builder.
 
 {description}
@@ -20,7 +20,7 @@ Bonita UI Builder is available by default and for no additional cost in all http
 === How to use?
 [subs=+macros]
 You can easily test a xref:development:development-instance-from-studio.adoc[Development instance from Studio]. +
-Please refer to the xref:getting-started:[initiation manual] for more general use cases. If you have any other 
+Please refer to the xref:getting-started:[initiation manual] for more general use cases. If you have any other
 additional questions, reach out to our {cscRootUrl}[Support team].
 
 

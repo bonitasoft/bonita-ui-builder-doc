@@ -1,5 +1,5 @@
 = Localize your application for various languages
-:page-aliases: 2024.3@bonita:applications:ui-builder/how-to-localize-your-application.adoc, 2025.1@bonita:applications:ui-builder/how-to-localize-your-application.adoc, 2025.2@bonita:applications:ui-builder/how-to-localize-your-application.adoc
+:page-aliases: ROOT:how-to-interact-with-tasks.adoc
 :description: Discover how to make your application accessible in multiple languages.
 
 {description}
@@ -40,7 +40,7 @@ For example: `This is a sample application to demonstrate the possibility of mak
 
 
 == 2. Define JS objects
-* Go to the JS section, create a new JavaScript object, and name it `localization`. Then, define keys for each language to correspond with the values set for the `SelectLanguage` widget. 
+* Go to the JS section, create a new JavaScript object, and name it `localization`. Then, define keys for each language to correspond with the values set for the `SelectLanguage` widget.
 
 Include the words or sentences along with their translations as key-value pairs for all languages, as shown in the code snippet below:
 

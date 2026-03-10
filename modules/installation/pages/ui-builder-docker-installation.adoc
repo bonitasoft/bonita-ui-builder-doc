@@ -1,5 +1,5 @@
 = Bonita UI Builder docker configuration guide
-:page-aliases: 2024.3@bonita:applications:ui-builder/ui-builder-docker-installation.adoc, 2025.1@bonita:applications:ui-builder/ui-builder-docker-installation.adoc, 2025.2@bonita:applications:ui-builder/ui-builder-docker-installation.adoc
+:page-aliases: ROOT:ui-builder-docker-installation.adoc
 :description: Provide the configuration guide for the Bonita UI Builder Docker images.
 
 This guide provides instructions on how to configure the `bonita-ui-builder` and `bonita-ui-proxy` Docker images.

@@ -1,5 +1,5 @@
 = Production packaging
-:page-aliases: 2024.3@bonita:applications:ui-builder/production-packaging.adoc, 2025.1@bonita:applications:ui-builder/production-packaging.adoc, 2025.2@bonita:applications:ui-builder/production-packaging.adoc
+:page-aliases: ROOT:production-packaging.adoc
 :description: Procedure to build the UI production binary
 
 NOTE: Before starting, ensure you have **Docker** installed on your system.

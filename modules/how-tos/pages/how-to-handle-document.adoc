@@ -1,5 +1,5 @@
 = Upload and view documents
-:page-aliases: 2024.3@bonita:applications:ui-builder/how-to-handle-document.adoc, 2025.1@bonita:applications:ui-builder/how-to-handle-document.adoc, 2025.2@bonita:applications:ui-builder/how-to-handle-document.adoc
+:page-aliases: ROOT:how-to-handle-document.adoc
 :description: Learn how to upload and view a document
 
 {description}

@@ -1,5 +1,5 @@
 = Initiation Manual
-:page-aliases: 2024.3@bonita:applications:ui-builder/initiation-manual.adoc, 2025.1@bonita:applications:ui-builder/initiation-manual.adoc, 2025.2@bonita:applications:ui-builder/initiation-manual.adoc
+:page-aliases: ROOT:create-an-interface.adoc
 :description: Bonita UI Builder allows for designing all kind of interfaces, forms and pages, without distinction. These interfaces interact with your Bonita process and BDM.
 
 {description}

@@ -1,5 +1,5 @@
 = Version control with Git
-:page-aliases: 2024.3@bonita:applications:ui-builder/version-control-with-git/version-control-with-git.adoc, 2025.1@bonita:applications:ui-builder/version-control-with-git/version-control-with-git.adoc, 2025.2@bonita:applications:ui-builder/version-control-with-git/version-control-with-git.adoc
+:page-aliases: ROOT:version-control-with-git/version-control-with-git.adoc
 :description: Discover how to use the Git feature in Bonita UI Builder for project management and team collaboration.
 
 {description}

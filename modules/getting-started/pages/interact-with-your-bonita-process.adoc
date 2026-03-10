@@ -1,5 +1,5 @@
 = Interact with your Bonita process
-:page-aliases: 2024.3@bonita:applications:ui-builder/interact-with-your-bonita-process.adoc, 2025.1@bonita:applications:ui-builder/interact-with-your-bonita-process.adoc, 2025.2@bonita:applications:ui-builder/interact-with-your-bonita-process.adoc
+:page-aliases: ROOT:interact-with-your-bonita-process.adoc
 :description: Interact with a Bonita runtime in multiple ways using API requests.
 
 {description}

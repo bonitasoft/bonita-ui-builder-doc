@@ -1,5 +1,5 @@
 = Revert changes in Git
-:page-aliases: 2024.3@bonita:applications:ui-builder/version-control-with-git/revert-changes.adoc, 2025.1@bonita:applications:ui-builder/version-control-with-git/revert-changes.adoc, 2025.2@bonita:applications:ui-builder/version-control-with-git/revert-changes.adoc
+:page-aliases: ROOT:version-control-with-git/revert-changes.adoc
 :description: Learn how to revert a committed change in Git to either a specific branch or the default branch, so you can fix bugs or undo unwanted changes.
 
 {description}

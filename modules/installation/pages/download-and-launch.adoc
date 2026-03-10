@@ -1,5 +1,5 @@
 = Download and launch Bonita UI Builder
-:page-aliases: 2024.3@bonita:applications:ui-builder/download-and-launch.adoc, 2025.1@bonita:applications:ui-builder/download-and-launch.adoc, 2025.2@bonita:applications:ui-builder/download-and-launch.adoc
+:page-aliases: ROOT:download-and-launch.adoc
 :description: Learn how to download, launch, and set up the Bonita UI Builder environment for development.
 
 

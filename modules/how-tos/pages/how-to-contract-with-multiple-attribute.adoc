@@ -1,5 +1,5 @@
 = How to make a contract with a `multiple` attribute
-:page-aliases: 2024.3@bonita:applications:ui-builder/how-to-contract-with-multiple-attribute.adoc, 2025.1@bonita:applications:ui-builder/how-to-contract-with-multiple-attribute.adoc, 2025.2@bonita:applications:ui-builder/how-to-contract-with-multiple-attribute.adoc
+:page-aliases: ROOT:how-to-contract-with-multiple-attribute.adoc
 :description: Learn how to make a contract with a multiple attribute.
 
 {description}

@@ -1,5 +1,5 @@
 = Release Notes
-:page-aliases: 2024.3@bonita:applications:ui-builder/ui-builder-release-notes.adoc, 2025.1@bonita:applications:ui-builder/ui-builder-release-notes.adoc, 2025.2@bonita:applications:ui-builder/ui-builder-release-notes.adoc
+:page-aliases: ROOT:ui-builder-release-notes.adoc
 :description: This is the release notes for Bonita UI Builder
 
 == UI Builder 1.3.10 (2026-03-02)

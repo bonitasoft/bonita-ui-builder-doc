@@ -1,5 +1,5 @@
 = How to create editable and powerful Tables
-:page-aliases: 2024.3@bonita:applications:ui-builder/how-to-create-editable-tables.adoc, 2025.1@bonita:applications:ui-builder/how-to-create-editable-tables.adoc, 2025.2@bonita:applications:ui-builder/how-to-create-editable-tables.adoc
+:page-aliases: ROOT:how-to-create-editable-tables.adoc
 :description: Learn how to configure tables from which you can edit Bonita data, display dynamic values, and many other things.
 
 {description}
@@ -46,17 +46,17 @@ image:multiplication.gif[multiplication]
 
 You don’t always need JS objects to create dynamic columns. Let’s say you want to create a *Gender* column whose value depends on whether the title is *Mrs* or *Mr*.
 
-In a similar way to what was done in the previous example, create a *Gender* column, click the wheel icon, and copy-paste the following code: 
+In a similar way to what was done in the previous example, create a *Gender* column, click the wheel icon, and copy-paste the following code:
 `{{currentRow.title === "Mr" ? "male" : "female"}}`
 
 
 
-== How to dynamically configure cells' color 
+== How to dynamically configure cells' color
 
 You might also want your Table’s cells to have different background colors, defined according to specific conditions.
 
 Let’s say you want to color cells depending on the user’s title.
-Click the wheel icon next to the `title` column, go to the `Style` tab, click the `JS` icon next to _Cell background_ and add the following code: 
+Click the wheel icon next to the `title` column, go to the `Style` tab, click the `JS` icon next to _Cell background_ and add the following code:
 `{{currentRow.title === "Mrs" ? "#fce7f3" : "#dbeafe"}}`
 
 
@@ -67,7 +67,7 @@ You can also trigger conditions on numbers, for example, if the user’s id is s
 
 
 
-== Create an editable table that can interact with your Bonita data 
+== Create an editable table that can interact with your Bonita data
 
 Editing your data directly from a Table has just become easy with Bonita UI Builder.
 
@@ -96,7 +96,7 @@ Go to the `Queries` tab and create the following query:
 This request updates the user’s firstname with the Table’s cell content.
 
 
-=== 2. Allow the Table to edit users 
+=== 2. Allow the Table to edit users
 
 Select the Table widget and click the box next to `firstname` to make it editable:
 
@@ -113,9 +113,9 @@ image:onsave_table.gif[onsave_table]
 The Table can now update the user's fistname after clicking `Save`.
 
 [TIP]
-You can also make the `firstname` column editable under conditions. 
+You can also make the `firstname` column editable under conditions.
 Click the wheel icon next to `firstname`, then click the `JS` icon next to *Editable* and copy/paste the following code:
-`{{currentRow.title === "Mrs" ? true : false}}`. 
+`{{currentRow.title === "Mrs" ? true : false}}`.
 This makes it editable only if the user is a _Mrs_.
 
 === 3. Automatically refresh the table after saving

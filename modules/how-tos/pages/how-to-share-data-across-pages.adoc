@@ -1,5 +1,5 @@
 = How to store and share data across pages
-:page-aliases: 2024.3@bonita:applications:ui-builder/how-to-share-data-across-pages.adoc, 2025.1@bonita:applications:ui-builder/how-to-share-data-across-pages.adoc, 2025.2@bonita:applications:ui-builder/how-to-share-data-across-pages.adoc
+:page-aliases: ROOT:how-to-share-data-across-pages.adoc
 :description: Learn how to store and send data through your application's pages
 
 {description}

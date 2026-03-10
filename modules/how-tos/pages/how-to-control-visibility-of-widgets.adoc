@@ -1,5 +1,5 @@
 = How to control the visibility of your widgets
-:page-aliases: 2024.3@bonita:applications:ui-builder/how-to-control-visibility-of-widgets.adoc, 2025.1@bonita:applications:ui-builder/how-to-control-visibility-of-widgets.adoc, 2025.2@bonita:applications:ui-builder/how-to-control-visibility-of-widgets.adoc
+:page-aliases: ROOT:how-to-control-visibility-of-widgets.adoc
 :description: Learn how to set conditions to make your widgets visible or not
 
 {description}
@@ -11,9 +11,9 @@
 
 == Using JavaScript
 
-Widgets' visibility can be controlled by JavaScript. 
+Widgets' visibility can be controlled by JavaScript.
 
-=== On text widgets 
+=== On text widgets
 Let’s say you want to make a widget visible on specific conditions, for example, if another widget contains a specific string.
 Click the `JS` button on your widget’s settings:
 
@@ -25,7 +25,7 @@ image:visibility-enabled.png[visibility-enabled]
 
 === On table widgets
 
-Let's say you have a table widget which displays ids, and you want to display another widget when you click a non-empty row in the table. 
+Let's say you have a table widget which displays ids, and you want to display another widget when you click a non-empty row in the table.
 This is what you should put in the `Visible` settings of your other widget:
 
 `{{table.selectedRow.id != "" && table.selectedRow!= undefined}}`
@@ -51,7 +51,7 @@ image:store-value.png[store-value]
 
 Do the same for another button widget whose `Value` will equal `false` instead of `true`.
 
-Then, drag and drop a text widget, click the little `JS` button next to `Visible`, and type the following code: 
+Then, drag and drop a text widget, click the little `JS` button next to `Visible`, and type the following code:
 
 image:store-state.png[store-state]
 

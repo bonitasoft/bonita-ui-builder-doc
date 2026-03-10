@@ -1,6 +1,5 @@
 = Avoid unnecessary information messages
-:page-aliases: 2024.3@bonita:applications:ui-builder/how-to-avoid-unnecessary-information-messages.adoc, 2025.1@bonita:applications:ui-builder/how-to-avoid-unnecessary-information-messages.adoc, 2025.2@bonita:applications:ui-builder/how-to-avoid-unnecessary-information-messages.adoc
-:description: Discover how to deal with notifications encountered while importing a page into the application in UI Builder.
+:page-aliases: ROOT:how-to-avoid-unnecessary-information-messages.adoc
 
 {description}
 

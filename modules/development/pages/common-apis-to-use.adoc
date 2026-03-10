@@ -1,5 +1,5 @@
 = Common APIs to use
-:page-aliases: 2024.3@bonita:applications:ui-builder/common-apis-to-use.adoc, 2025.1@bonita:applications:ui-builder/common-apis-to-use.adoc, 2025.2@bonita:applications:ui-builder/common-apis-to-use.adoc
+:page-aliases: ROOT:common-apis-to-use.adoc
 :description: Discover frequently used Bonita APIs to efficiently build complex applications in the UI Builder.
 
 {description}
@@ -73,7 +73,7 @@ For example:
     - GET | `/API/bdm/businessData/[businessObject]?q=[query]&p=0&c=10&f=[filterString]=[filterParam]`
     - GET | `/API/bdm/businessData/com.company.model.Claim?c=1000&p=0&q=find`
 
-`q=[query]` is a mandatory parameter. Queries are used to get information about data objects stored in the database. A set of xref:@bonita:data:define-and-deploy-the-bdm.adoc#_queries[default queries], `find` and `find_by`, is defined automatically for each object in the BDM. You can also create custom queries. 
+`q=[query]` is a mandatory parameter. Queries are used to get information about data objects stored in the database. A set of xref:@bonita:data:define-and-deploy-the-bdm.adoc#_queries[default queries], `find` and `find_by`, is defined automatically for each object in the BDM. You can also create custom queries.
 
 For more detailed information, refer to the {openApiUrl}/latest/#tag/BusinessDataQuery/operation/searchBusinessData[business data api documentation].
 

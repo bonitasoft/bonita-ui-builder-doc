@@ -1,5 +1,5 @@
 = Bonita UI Builder Best Practices
-:page-aliases: 2024.3@bonita:applications:ui-builder/bonita-ui-builder-best-practices.adoc, 2025.1@bonita:applications:ui-builder/bonita-ui-builder-best-practices.adoc, 2025.2@bonita:applications:ui-builder/bonita-ui-builder-best-practices.adoc
+:page-aliases: ROOT:bonita-ui-builder-best-practices.adoc
 :description: Learn how to manage common issues and warnings in Bonita UI Builder to build advanced and effective interfaces.
 
 {description}

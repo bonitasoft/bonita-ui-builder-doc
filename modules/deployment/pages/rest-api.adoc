@@ -1,5 +1,5 @@
 = REST API for Bonita UI Builder
-:page-aliases: 2024.3@bonita:applications:ui-builder/rest-api.adoc, 2025.1@bonita:applications:ui-builder/rest-api.adoc, 2025.2@bonita:applications:ui-builder/rest-api.adoc
+:page-aliases: ROOT:rest-api.adoc
 :description: The REST API lets you automatize some UI Builder actions with HTTP requests.
 
 {description}

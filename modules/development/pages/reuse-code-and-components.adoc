@@ -1,5 +1,5 @@
 = Reuse code and components
-:page-aliases: 2024.3@bonita:applications:ui-builder/reuse-code-and-components.adoc, 2025.1@bonita:applications:ui-builder/reuse-code-and-components.adoc, 2025.2@bonita:applications:ui-builder/reuse-code-and-components.adoc
+:page-aliases: ROOT:reuse-code-and-components.adoc
 :description: Improve productivity and consistency in your applications.
 
 {description}

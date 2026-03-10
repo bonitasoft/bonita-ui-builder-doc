@@ -1,5 +1,5 @@
 = How to grant permissions to perform requests to Bonita REST API
-:page-aliases: 2024.3@bonita:applications:ui-builder/how-to-declare-permissions-for-rest-api-request.adoc, 2025.1@bonita:applications:ui-builder/how-to-declare-permissions-for-rest-api-request.adoc, 2025.2@bonita:applications:ui-builder/how-to-declare-permissions-for-rest-api-request.adoc
+:page-aliases: ROOT:how-to-declare-permissions-for-rest-api-request.adoc
 :description: Learn how to identify and grant the necessary permissions to your users.
 
 {description}

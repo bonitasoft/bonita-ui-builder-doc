@@ -1,5 +1,5 @@
 = Development instance from Studio
-:page-aliases: applications:development-instance-from-studio.adoc
+:page-aliases: ROOT:development-instance-from-studio.adoc
 :description: Learn how to launch Bonita UI Builder from Bonita Studio for development only.
 
 [NOTE]

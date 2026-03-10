@@ -1,5 +1,5 @@
 = Guides and Tutorials
-:page-aliases: 2024.3@bonita:applications:ui-builder/how-tos-builder.adoc, 2025.1@bonita:applications:ui-builder/how-tos-builder.adoc, 2025.2@bonita:applications:ui-builder/how-tos-builder.adoc
+:page-aliases: ROOT:how-tos-builder.adoc
 :description: Learn how to use Bonita UI Builder to its full potential and develop powerful and complex interfaces effortlessly.
 
 {description}

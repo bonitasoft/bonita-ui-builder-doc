@@ -1,5 +1,5 @@
 = Package and deploy your application
-:page-aliases: 2024.3@bonita:applications:ui-builder/package-and-deploy-your-application.adoc, 2025.1@bonita:applications:ui-builder/package-and-deploy-your-application.adoc, 2025.2@bonita:applications:ui-builder/package-and-deploy-your-application.adoc
+:page-aliases: ROOT:package-and-deploy-your-application.adoc
 :description: Step-by-step guide to transition from development to production using Bonita UI Builder
 
 
@@ -12,7 +12,7 @@ Once you've designed an application that interacts with your xref:getting-starte
 
 [NOTE]
 ====
-*Since*: `UIB 1.3.3` 
+*Since*: `UIB 1.3.3`
 ====
 
 Once the design is complete, export the application(s) as JSON file from Bonita UI Builder by clicking the `export` button on the home page. This export will be used for building the production binary.

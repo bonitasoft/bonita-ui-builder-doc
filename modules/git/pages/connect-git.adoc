@@ -1,5 +1,5 @@
 = Connect applications to Git
-:page-aliases: 2024.3@bonita:applications:ui-builder/version-control-with-git/connect-git.adoc, 2025.1@bonita:applications:ui-builder/version-control-with-git/connect-git.adoc, 2025.2@bonita:applications:ui-builder/version-control-with-git/connect-git.adoc
+:page-aliases: ROOT:version-control-with-git/connect-git.adoc
 :description: Learn how to connect your Bonita UI Builder application to a remote Git repository.
 
 {description}

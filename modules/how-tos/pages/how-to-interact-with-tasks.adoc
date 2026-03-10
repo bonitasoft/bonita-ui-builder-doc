@@ -1,5 +1,5 @@
 = Interact with tasks
-:page-aliases: 2024.3@bonita:applications:ui-builder/how-to-interact-with-tasks.adoc, 2025.1@bonita:applications:ui-builder/how-to-interact-with-tasks.adoc, 2025.2@bonita:applications:ui-builder/how-to-interact-with-tasks.adoc
+:page-aliases: ROOT:how-to-interact-with-tasks.adoc
 :description: Discover how to interact with tasks from a Bonita UI Builder application.
 
 {description}
@@ -13,10 +13,10 @@ While Bonita UI Builder does not yet support automatic form creation from contra
 
 == API resources
 
-There are four Bonita xref:development:common-apis-to-use.adoc[API resources] you mostly need to interact with your tasks: 
+There are four Bonita xref:development:common-apis-to-use.adoc[API resources] you mostly need to interact with your tasks:
 
-* `GET /humanTask`, 
-* `POST /userTask/execution`, 
+* `GET /humanTask`,
+* `POST /userTask/execution`,
 * `GET /userTask/context`,
 * `GET /bdm/businessData`.
 
@@ -33,7 +33,7 @@ For more detailed information, refer to the {openApiUrl}/latest/#tag/HumanTask/o
 
 
 === User task execution
-The user task execution API executes a task identified by its id. 
+The user task execution API executes a task identified by its id.
 
 For example:
 
@@ -45,7 +45,7 @@ image:execute_hr_mngt_task.png[execute_ht_mngt_task]
 
 Here, `newEmployeeInput` is the contract name, and `workspaceLocation` and `workspaceComments` are mandatory inputs of the contract. They take as value what is typed in the `newEmployeeWorkspaceLocation` and `newEmployeeWorkspaceComment` widgets.
 
-Please note that a task can only be executed by the right actors, as defined in your Process Diagram. 
+Please note that a task can only be executed by the right actors, as defined in your Process Diagram.
 
 For more detailed information, refer to the {openApiUrl}/latest/#tag/UserTask/operation/executeUserTask[task execution api documentation].
 
@@ -68,7 +68,7 @@ For example:
     - GET | `/API/bdm/businessData/[businessObject]?q=[query]&p=0&c=10&f=[filterString]=[filterParam]`
     - GET | `/API/bdm/businessData/com.company.model.Claim?c=1000&p=0&q=find`
 
-`q=[query]` is a mandatory parameter. Queries are used to get information about data objects stored in the database. A set of xref:@bonita:data:define-and-deploy-the-bdm.adoc#_queries[default queries], `find` and `find_by`, is defined automatically for each object in the BDM. You can also create custom queries. 
+`q=[query]` is a mandatory parameter. Queries are used to get information about data objects stored in the database. A set of xref:@bonita:data:define-and-deploy-the-bdm.adoc#_queries[default queries], `find` and `find_by`, is defined automatically for each object in the BDM. You can also create custom queries.
 
 For more detailed information, refer to the {openApiUrl}/latest/#tag/BusinessDataQuery/operation/searchBusinessData[business data api documentation].
 
@@ -124,7 +124,7 @@ Go back to the `Queries` tab and create the following query:
 
 The `claimInput` contract of the task expects a parameter called 'answer', which will be fetched from the `Input1` widget.
 
-This query will use the task id fetched from the table (`Table1.triggeredRow.id`) to execute the task. 
+This query will use the task id fetched from the table (`Table1.triggeredRow.id`) to execute the task.
 
 Then, open the modal and bind the `executeReviewAndAnswerClaim` query to the `Onclick` property of the `Confirm` button:
 
@@ -140,11 +140,11 @@ To make sure you open the right modal, you can add the following code in the `On
 ====
 
 
-=== Retrieve business data 
+=== Retrieve business data
 
 If you would like to display business data, context and information from your previous tasks, here is what you should do:
 
-* Call `GET /userTask/context` to retrieve a storageId. For example: `GET /bonita/API/bpm/userTask/{{Table1.triggeredRow.id}}/context` 
+* Call `GET /userTask/context` to retrieve a storageId. For example: `GET /bonita/API/bpm/userTask/{{Table1.triggeredRow.id}}/context`
 * Call `GET /API/bdm/businessData` to retrieve your business data, using the storageId returned previously. For example: `GET /API/bdm/businessData/com.company.model.Claim?c=1000&p=0&q=findByPersistenceId&f=persistenceId=+{{storageId}}+`
 
 These steps could be done, for example, in a JS object and bound to a widget.

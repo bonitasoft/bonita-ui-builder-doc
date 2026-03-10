@@ -4,8 +4,8 @@
 
 == UI Builder 1.3.11 (2026-03-10)
 
-* Fixed static URL feature not working in applications created before UI Builder 1.3.10
-* Fixed logout not working on editor pages
+* Fixed static URL feature not working in environment created before UI Builder 1.3.10
+* Fixed logout not working in editor
 
 == UI Builder 1.3.10 (2026-03-02)
 

@@ -21,6 +21,11 @@ xref:how-to-control-visibility-of-widgets.adoc[[.card-title]#How to control visi
 
 [.card.card-index]
 --
+xref:how-to-adapt-ui-to-viewport-size.adoc[[.card-title]#How to adapt UI to viewport size# [.card-body.card-content-overflow]#pass:q[Learn how to make your applications responsive using widget visibility and page redirection]#]
+--
+
+[.card.card-index]
+--
 xref:how-to-handle-pagination.adoc[[.card-title]#How to handle server-side pagination# [.card-body.card-content-overflow]#pass:q[Learn how to handle server-side pagination and optimize performance]#]
 --
 

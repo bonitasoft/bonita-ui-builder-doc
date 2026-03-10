@@ -7,6 +7,7 @@
 ** xref:how-tos:how-to-handle-pagination.adoc[Handle Pagination]
 ** xref:how-tos:how-to-handle-queries-dependency.adoc[Handle Query Dependencies]
 ** xref:how-tos:how-to-control-visibility-of-widgets.adoc[Control Widget Visibility]
+** xref:how-tos:how-to-adapt-ui-to-viewport-size.adoc[Adapt UI to Viewport Size]
 ** xref:how-tos:how-to-create-editable-tables.adoc[Create Editable Tables]
 ** xref:how-tos:how-to-contract-with-multiple-attribute.adoc[Contract with Multiple Attributes]
 ** xref:how-tos:how-to-localize-your-application.adoc[Localize Application]

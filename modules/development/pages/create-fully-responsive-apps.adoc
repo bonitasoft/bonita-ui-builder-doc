@@ -45,3 +45,60 @@ Now, set the `Height` property of the Container to `Auto Height` and preview the
 you will see that the content is displayed correctly, the Container height adapts to the content:
 
 image:responsive-container-ok.png[responsive-container-ok, 400, 200]
+
+
+== Quick Comparison Matrix
+
+When deciding how to structure a responsive application, you can choose from several strategies. Each involves a trade-off between development effort, maintainability, and user experience across devices:
+
+* *Two Separate Apps/Pages* — dedicated layouts per device
+* *Conditional Visibility on Widgets* — show/hide individual widgets based on viewport
+* *Container Swapping* — show/hide entire containers to switch between layouts
+* *Hybrid* — combine page splitting with conditional containers for the best of both approaches
+
+The following table gives a quick side-by-side rating to help you narrow down your options:
+
+[cols="^1,3,^2,^2,^2,^2,^2", options="header"]
+|===
+| #
+| Strategy
+| Dev Ease
+| Maint. Ease
+| Mobile UX
+| Desktop UX
+| Performance
+
+| 1 | Two Separate Apps/Pages      | Low    | Low    | Very High | Very High | Very High
+| 2 | Conditional Visibility on Widgets             | Medium | Medium | High      | Very High | Medium
+| 3 | Container Swapping (Show/Hide Containers)     | High   | High   | High      | Very High | High
+| 4 | Hybrid: Page Splitting + Conditional Containers | High   | High   | Very High | Very High | High
+|===
+
+To understand these ratings, here are the key trade-offs for each strategy:
+
+[cols="1,2,2", options="header"]
+|===
+| Strategy
+| Pros
+| Cons
+
+| *Two Separate Apps/Pages*
+| Best UX per device: each layout is fully optimized. Best performance: only the relevant widgets are loaded.
+| Highest effort: every change must be applied in both places.
+
+| *Conditional Visibility on Widgets*
+| Quick to set up: toggle individual widgets with the `Visible` property.
+| All widgets are loaded regardless of visibility, which may affect performance on large pages. Can become hard to maintain when many widgets differ.
+
+| *Container Swapping (Show/Hide Containers)*
+| Clean separation: group desktop and mobile layouts in distinct containers, toggle them as a whole.
+| Both containers are still loaded. Requires careful organization to avoid duplication inside containers.
+
+| *Hybrid: Page Splitting + Conditional Containers*
+| Balances UX and effort: separate pages for radically different layouts, conditional containers for minor adjustments within each page.
+| More moving parts to coordinate between pages and containers.
+|===
+
+== Related How-To
+
+For a step-by-step guide on redirecting users based on viewport width, see xref:how-tos:how-to-adapt-ui-to-viewport-size.adoc[How to Adapt UI to Viewport Size].

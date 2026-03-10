@@ -1,0 +1,257 @@
+= Adapt UI to viewport size
+:description: Learn how to make your UI Builder applications responsive by adapting the interface to different viewport sizes using widget visibility and page redirection strategies.
+
+{description}
+
+* Difficulty: intermediate
+* Prerequisites: have an xref:getting-started:create-an-interface.adoc[interface created] on Bonita UI Builder
+* Estimated time: 15 minutes
+
+To build applications that must work well on both desktop and mobile, we have laid out two of the main strategies available in this how-to — and they can be combined.
+
+*Strategy 1 — Widget visibility*: use `appsmith.ui.width` to show or hide individual widgets based on the viewport width, without any page redirect. This works well when the same page structure can serve both device types with selective adjustments.
+
+*Strategy 2 — Redirect on page load*: automatically send the user to a different page or application depending on their viewport width. This is the right approach when desktop and mobile require fundamentally different layouts — a complex dashboard with wide tables and side panels will never feel right squeezed onto a phone screen, no matter how well the widgets reflow.
+
+For Strategy 2, you have two ways to organize the separate interfaces:
+
+* *Two pages within the same application*: a desktop page and a mobile page. This keeps everything in a single project and is simpler to maintain.
+* *Two separate applications*: a full desktop application and a dedicated mobile-responsive application. This is better when the mobile experience differs significantly (different navigation, fewer features, distinct workflows).
+
+Both strategies rely on `appsmith.ui`, which exposes the viewport width and height at the moment the page loads. You can use either strategy independently or combine them for fine-grained control.
+
+== Strategy 1 — Control Widget Visibility via a JSObject
+
+[#s1-step1]
+=== Step 1 — Expose viewport width globally and control widget visibility
+
+Instead of (or in addition to) a redirect, you can store `appsmith.ui.width` as a global variable in a JSObject so that every widget on the page can reference it. Create a JSObject with a property that captures the value on page load:
+
+[source,javascript]
+----
+export default {
+    // Use this to get the width of the viewport (on page load only)
+    VIEWPORT_WIDTH: appsmith.ui.width,
+};
+----
+
+Then reference `JSObject1.VIEWPORT_WIDTH` in any widget's *Visible* property to show or hide it based on screen width. For example:
+
+[source]
+----
+{{ JSObject1.VIEWPORT_WIDTH >= 768 }}
+----
+
+This hides the widget on mobile screens. Or inversely:
+
+[source]
+----
+{{ JSObject1.VIEWPORT_WIDTH < 768 }}
+----
+
+This shows the widget *only* on mobile screens.
+
+For more details on controlling widget visibility, see xref:how-to-control-visibility-of-widgets.adoc[How to control the visibility of your widgets].
+
+== Strategy 2 — Redirect Mobile Users on Page Load
+
+The goal of the following steps is to create a *JS function that runs on page load*, reads the viewport width from `appsmith.ui`, and:
+
+* If the viewport is *narrow* (mobile device), redirects the user to a *mobile-specific application or page*.
+* If the viewport is *wide* (desktop), lets the user stay on the current page (no redirect).
+
+[#s2-step1]
+=== Step 1 — Create a JSObject
+
+In Bonita UI Builder (Appsmith), go to the *JS* tab in the left sidebar and click *+ (for a new JS Object)*.
+
+Replace the default content with the following code:
+
+[source,javascript]
+----
+export default {
+
+    // Common breakpoint: 768px is the standard threshold
+    // below which a device is considered "mobile"
+    MOBILE_BREAKPOINT: 768,
+
+    // ── Redirect targets ──────────────────────────────────
+    // Option A: another PAGE inside the same application
+    MOBILE_PAGE_NAME: "MobileDashboard",
+
+    // Option B: an entirely different APPLICATION URL
+    // (use this if you have a separate mobile-responsive Bonita app)
+    MOBILE_APP_URL: "https://your-host/app/mobile-app/page",
+    
+    // Use this to get the width of the viewport (on page load only)
+    VIEWPORT_WIDTH: appsmith.ui.width,
+    /**
+     * Reads the viewport width captured at page load via appsmith.ui
+     * and redirects mobile users to the appropriate destination.
+     *
+     * Configure this function to run "On page load" (see Step 2).
+     */
+    redirectIfMobile() {
+        // 1. (Optional) Log the value for debugging
+        console.log("Viewport width at page load:", this.VIEWPORT_WIDTH);
+
+        // 2. Check whether the viewport qualifies as "mobile"
+        if (this.VIEWPORT_WIDTH < this.MOBILE_BREAKPOINT) {
+
+            // ── OPTION A ── Navigate to another PAGE in the same app
+            navigateTo(this.MOBILE_PAGE_NAME, {}, "SAME_WINDOW");
+
+            // ── OPTION B ── Navigate to a completely different APPLICATION
+            // Comment out Option A above and uncomment the line below instead:
+            // navigateTo(this.MOBILE_APP_URL, {}, "SAME_WINDOW");
+        }
+
+        // If the viewport is >= 768 px the user stays on the current page.
+    }
+};
+----
+
+==== Understanding the code
+
+[cols="1,3", options="header"]
+|===
+| Element
+| Explanation
+
+| `appsmith.ui.width`
+| Returns the viewport width in pixels, captured once when the page loaded.
+
+| `MOBILE_BREAKPOINT`
+| Set to `768` — a widely used breakpoint that distinguishes phones/small tablets from desktops. Adjust to your needs (e.g., `1024` to also catch larger tablets).
+
+| `navigateTo(target, params, windowType)`
+| Appsmith's built-in global function. `target` can be a *page name* (internal) or a *full URL* (external). `params` is an optional query-parameter object. `windowType` is either `"SAME_WINDOW"` or `"NEW_WINDOW"`.
+|===
+
+[#s2-step2]
+=== Step 2 — Set the function to run On Page Load
+
+. In the JSObject you just created, click the *Settings* tab (gear icon) at the bottom of the JS editor.
+. Find the function `redirectIfMobile` in the list.
+. Toggle *"Run on Page Load"* to *ON*.
+
+This ensures `redirectIfMobile()` executes automatically every time the page is opened — before the user sees or interacts with anything.
+
+[#s2-step3]
+=== Step 3 — Prepare the mobile destination
+
+Choose *one* of the two options below.
+
+==== Option A — Redirect to another page in the same application
+
+. In the left sidebar under *Pages*, click *+* to create a new page.
+. Name it exactly as specified in `MOBILE_PAGE_NAME` (e.g., `MobileDashboard`).
+. Design this page with a mobile-first layout: stack widgets vertically, use `Auto Height`, avoid fixed widths.
+
+==== Option B — Redirect to a separate Bonita application
+
+. Build and deploy a separate Bonita UI Builder application optimized for mobile.
+. Copy its deployed URL and paste it into `MOBILE_APP_URL` in the JSObject.
+. In the JSObject code, *comment out* the Option A `navigateTo` line and *uncomment* the Option B line.
+
+== (Optional) Advanced Example — Multiple Breakpoints
+
+[TIP]
+====
+This section is optional. If you are just getting started, you can skip it and come back later.
+====
+
+[source,javascript]
+----
+export default {
+
+    // Define breakpoints
+    BREAKPOINTS: {
+        MOBILE: 768,
+        TABLET: 1024
+    },
+
+    // Define destinations per device category
+    DESTINATIONS: {
+        mobile:  "MobilePage",
+        tablet:  "TabletPage"
+        // desktop: stay on current page
+    },
+
+    redirectByDevice() {
+        const width = appsmith.ui.width;
+
+        if (width < this.BREAKPOINTS.MOBILE) {
+            // Phone
+            navigateTo(this.DESTINATIONS.mobile, {}, "SAME_WINDOW");
+        } else if (width < this.BREAKPOINTS.TABLET) {
+            // Tablet
+            navigateTo(this.DESTINATIONS.tablet, {}, "SAME_WINDOW");
+        }
+        // else: desktop — no redirect
+    }
+};
+----
+
+Set `redirectByDevice` to run *On Page Load* following the same process as <<s2-step2,Step 2>>.
+
+== Important Notes and Best Practices
+
+. *`appsmith.ui` is a snapshot, not a live value.* The dimensions are captured once when the page mounts. There is no resize listener — if the user rotates their phone or resizes the browser, `appsmith.ui` will not update until the page is refreshed.
+
+. *Avoid redirect loops.* Make sure the destination mobile page does *not* contain the same redirect logic pointing back to the desktop page. Either:
+* Only place the redirect JSObject on the *desktop* page, not on the mobile page.
+* Or add a guard condition using `appsmith.URL` to check whether you are already on the mobile page.
+
+. *Combine with the `Visible` property for fine-grained control.* Use `{{appsmith.ui.width}}` in individual widgets' Visible property to hide desktop-only components on mobile, even without a full redirect.
+
+. *Common breakpoint values:*
++
+[cols="1,1", options="header"]
+|===
+| Device category
+| Width range
+
+| Mobile (phones)
+| < 768 px
+
+| Tablet
+| 768 px – 1023 px
+
+| Desktop
+| >= 1024 px
+|===
+
+== Summary
+
+[cols="1,2", options="header"]
+|===
+| What
+| How
+
+| Access viewport width
+| `appsmith.ui.width`
+
+| Access viewport height
+| `appsmith.ui.height`
+
+| Redirect to a page
+| `navigateTo("PageName", {}, "SAME_WINDOW")`
+
+| Redirect to another app
+| `navigateTo("https://full-url", {}, "SAME_WINDOW")`
+
+| Run function on page load
+| Toggle "Run on Page Load" in JSObject settings
+
+| Control widget visibility
+| Set Visible property to `{{ appsmith.ui.width >= 768 }}`
+
+| Minimum UI Builder version
+| *1.3.10*
+|===
+
+== See also
+
+* xref:development:create-fully-responsive-apps.adoc[Create Fully Responsive Applications] — concept page with responsive strategies overview
+* xref:how-to-control-visibility-of-widgets.adoc[How to control the visibility of your widgets] — detailed guide on widget visibility

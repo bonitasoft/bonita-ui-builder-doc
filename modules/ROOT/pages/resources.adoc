@@ -1,5 +1,4 @@
 = Resources
-:page-aliases: ROOT:resources.adoc
 :description: Here, you'll find a curated collection of references to help you maximize your productivity and enhance your understanding of Bonita UI Builder.
 
 {description}

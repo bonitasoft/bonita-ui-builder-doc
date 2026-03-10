@@ -1,5 +1,5 @@
 = Localize your application for various languages
-:page-aliases: ROOT:how-to-interact-with-tasks.adoc
+:page-aliases: ROOT:how-to-localize-your-application.adoc
 :description: Discover how to make your application accessible in multiple languages.
 
 {description}

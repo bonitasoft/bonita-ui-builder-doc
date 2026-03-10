@@ -1,5 +1,5 @@
 = How to handle server-side pagination
-:page-aliases: 2ROOT:how-to-handle-pagination.adoc
+:page-aliases: ROOT:how-to-handle-pagination.adoc
 :description: Learn how to handle server-side pagination and optimize performance
 
 {description}

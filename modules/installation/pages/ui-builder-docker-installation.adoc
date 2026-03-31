@@ -30,6 +30,21 @@ The following environment variables are optional:
 value
 when port 80 is already occupied inside the container, for example on Kubernetes platforms where a sidecar proxy binds to port 80. See <<custom-internal-port>> for details.
 
+[NOTE]
+====
+Reserved ports (do NOT use for **UIB_INTERNAL_PORT**):
+|===
+|Reserved Port | Services
+|8080 | Backend (Spring Boot)
+|8091 | RTS (WebSocket)
+|9001 | Supervisor
+|2019 | Caddy admin API
+|===
+
+Safe choices: **8090, 8082, 3000**, or any other unused port.
+====
+
+
 [WARNING]
 ====
 *Beta Feature: Zoom Controls for Deployed Applications*

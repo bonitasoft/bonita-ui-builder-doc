@@ -1,3 +1,4 @@
 * Installation
+** xref:installation:development-instance-from-studio.adoc[Development instance from Studio]
 ** xref:installation:download-and-launch.adoc[Download and Launch]
 ** xref:installation:ui-builder-docker-installation.adoc[Docker Configuration]

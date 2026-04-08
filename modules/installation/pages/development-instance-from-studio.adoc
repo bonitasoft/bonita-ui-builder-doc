@@ -1,16 +1,16 @@
 = Development instance from Studio
-:page-aliases: ROOT:development-instance-from-studio.adoc
+:page-aliases: ROOT:development-instance-from-studio.adoc,development:development-instance-from-studio.adoc
 :description: Learn how to launch Bonita UI Builder from Bonita Studio for development only.
 
 [NOTE]
 ====
-For Subscription editions only.
+For Bonita Studio Subscription editions only.
 ====
 
 {description}
 
 == Prerequisites
-* Docker 20.10.0 or later must be installed and the daemon is running.
+* Docker 20.10.0 or later must be installed, and the daemon is running.
 * 2025.2 Bonita Studio (or any later version) opened.
 
 To launch Bonita UI Builder from Bonita Studio, the `docker` command must be available from the command line. +
@@ -50,8 +50,8 @@ There are two ways to manage version control for a UI Builder application. You c
 * Export your application as a JSON file and use the version control on the Bonita project.
 
 UI Builder built-in xref:git:version-control-with-git.adoc[Version control with Git] is recommended if you are
-collaborating with others on a same UI Builder application.
-This facilitates the conflicts resolution process with finer grain artifacts.
+collaborating with others on the same UI Builder application.
+This facilitates the conflict resolution process with finer grain artifacts.
 
 image::development-instance-from-studio/git-with-uib.png[]
 

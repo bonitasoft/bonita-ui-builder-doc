@@ -2,6 +2,23 @@
 :page-aliases: ROOT:ui-builder-release-notes.adoc
 :description: This is the release notes for Bonita UI Builder
 
+[[v1.3.12]]
+== UI Builder 1.3.12 (2026-04-21)
+
+[discrete]
+=== Improvements
+
+* Upgrade Appsmith from v1.95 to v1.98.
+* MongoDB (27017) and Redis (6379) ports are now reserved in `UIB_INTERNAL_PORT`, preventing accidental conflicts with internal services.
+* Invalid values provided for `UIB_INTERNAL_PORT` are now rejected at container startup to catch misconfiguration early.
+
+[discrete]
+=== Bug fixes
+
+* Fixed an issue where applications created or imported via the REST API did not benefit from ETag/304 HTTP caching, which could cause unnecessary data transfers for API consumers.
+* Fixed a container startup failure when application data is stored in bind-mounted Docker volumes, caused by a missing `git safe.directory` configuration.
+* Fixed an issue where the RTS server could fail to start due to missing executable permissions on its startup script.
+
 == UI Builder 1.3.11 (2026-03-10)
 
 * Fixed static URL feature not working in environment created before UI Builder 1.3.10

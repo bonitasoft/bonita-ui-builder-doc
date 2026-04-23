@@ -9,7 +9,7 @@ asciidoc:
     openApiUrl: 'https://api-documentation.bonitasoft.com'
     cscRootUrl: 'https://csc.bonitacloud.bonitasoft.com'
     # UI Builder attributes
-    bonita-ui-builder-version: '1.3.11'
+    bonita-ui-builder-version: '1.3.12'
     bonita-ui-builder-image: '{bonitasoft-docker-repository}/bonita-ui-builder'
     bonita-ui-proxy-image: '{bonitasoft-docker-repository}/bonita-ui-proxy'
     openApiLatestVersion: '0.0.21' # latest compatible version of bonita openApi with this Bonita version

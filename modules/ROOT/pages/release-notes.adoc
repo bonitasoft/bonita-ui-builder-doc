@@ -48,6 +48,12 @@ deployment on platforms where a sidecar proxy occupies port 80 (e.g., Kubernetes
 
 * Fixed an issue in production mode that prevented importing applications via the API, introduced in version 1.3.7.
 
+[[v1.3.8-security-fixes]]
+[discrete]
+=== Security fixes
+
+* CVE-207: netty-codec - Netty is an asynchronous event-driven network application framework for rapid development of maintainable  (public CVE-2025-58057)
+
 
 == UI Builder 1.3.7 (2026-02-09)
 
@@ -63,12 +69,33 @@ In this release we are adding a two new xref:deployment:rest-api.adoc[REST API],
 * Delete single application
 * Update an application
 
+[[v1.3.7-security-fixes]]
+[discrete]
+=== Security fixes
+
+* CVE-225: node - An incomplete fix has been identified for CVE-2025-23084 in Node.js, specifically affecting Windows device names  (public CVE-2025-27210)
+* CVE-208: node - A malformed `HTTP/2 HEADERS` frame with oversized, invalid `HPACK` data can cause Node.js to crash by triggering  (public CVE-2025-59465)
+* CVE-204: node - A flaw in Node.js's buffer allocation logic can expose uninitialized memory when allocations are interrupted, whe (public CVE-2025-55131)
+* CVE-203: node - A flaw in Node.js’s Permissions model allows attackers to bypass `--allow-fs-read` and `--allow-fs-write` restric (public CVE-2025-55130)
+* CVE-202: redis-server - Redis is an open source, in-memory database that persists on disk. Versions 8.2.1 and below allow an auth (public CVE-2025-49844)
+* CVE-198: mongod - Mismatched length fields in Zlib compressed protocol headers may allow a read of uninitialized heap memory by a (public CVE-2025-14847)
+* CVE-197: mongos - MongoDB Server may allow upsert operations retried within a transaction to violate unique index constraints, po (public CVE-2025-10060)
+* CVE-190: libxml2 - A flaw was found in libxml2's xmlBuildQName function, where integer overflows in buffer size calculations can  (public CVE-2025-6021)
+
 
 == UI Builder 1.3.6 (2026-01-30)
 
 * Upgrade Appsmith from v1.90 to v1.93
 * Handle UI proxy external port: NGINX now correctly generates redirect URLs with the external host port
 * Add feature flag to enable or disable zoom controls in deployed applications
+
+[[v1.3.6-security-fixes]]
+[discrete]
+=== Security fixes
+
+* CVE-195: cryptography - cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. S (public CVE-2024-26130)
+* CVE-184: PyJWT - pyjwt v2.10.1 was discovered to contain weak encryption. (public CVE-2025-45768)
+* CVE-181: cryptography - A flaw was found in the python-cryptography package. This issue may allow a remote attacker to decrypt ca (public CVE-2023-50782)
 
 == UI Builder 1.3.5 (2025-12-03)
 

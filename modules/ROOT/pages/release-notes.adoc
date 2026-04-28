@@ -90,7 +90,7 @@ In this release we are adding a two new xref:deployment:rest-api.adoc[REST API],
 [[v1.3.6-security-fixes]]
 *Security fixes*
 
-* CVE-195: cryptography - cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. S (public CVE-2024-26130)
+* CVE-195: cryptography - NULL Pointer Dereference in pkcs12.serialize_key_and_certificates Causes Python Process Crash (public CVE-2024-26130)
 * CVE-184: PyJWT - pyjwt v2.10.1 was discovered to contain weak encryption. (public CVE-2025-45768)
 * CVE-181: python-cryptography -  a remote attacker may decrypt captured messages in TLS servers (public CVE-2023-50782)
 

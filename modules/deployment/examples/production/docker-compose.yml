@@ -27,7 +27,7 @@ services:
 
   bonita-app:
     # Replace below with your image name and version, as built following
-    # https://documentation.bonitasoft.com/bonita/latest/build-run/build-application#_docker_image_packaging
+    # https://documentation.ofelia.com/bonita/latest/build-run/build-application#_docker_image_packaging
     image: my-bonita-application:1.0.0
     volumes:
       - <YOUR_LICENSE_FOLDER>:/opt/bonita_lic

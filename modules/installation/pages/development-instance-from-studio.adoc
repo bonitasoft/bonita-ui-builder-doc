@@ -27,8 +27,19 @@ image::development-instance-from-studio/new-project.png[]
 You can choose to automatically start your preferred UI Tool (UI Builder or legacy UI Designer) when opening the project. +
 You can disable the tool's auto-start if you do not use it regularly.
 
-For Bonita UI Builder, select the version you want to use. The UI Proxy version is also needed (currently the same as UI Builder). +
-"latest" will always use the latest available version, upgrading whenever a new version is available.
+For Bonita UI Builder, select the version you want to use. The UI Proxy version is also needed (currently the same as UI Builder).
+
+`latest` will always use the latest available version, upgrading whenever a new version is available.
+
+[WARNING]
+====
+Using `latest` lets you benefit from the latest features and bug fixes without needing to update your configuration. +
+However, it may lead to unexpected issues if a new version is released with breaking changes. +
+In addition, it may cause inconsistencies between your local development environment and other environments (e.g., CI, production) that generally use a specific version. +
+
+If you want to have more control over the version used, it is recommended to select a specific version instead of `latest`.
+====
+
 If you want to stick to a specific version that is more recent than the Studio, you can type it manually.
 
 image::development-instance-from-studio/custom-version.png[]

@@ -2,6 +2,23 @@
 :page-aliases: ROOT:ui-builder-release-notes.adoc
 :description: This is the release notes for Bonita UI Builder
 
+[[v1.3.12]]
+== UI Builder 1.3.12 (2026-04-23)
+
+[discrete]
+=== Improvements
+
+* Upgrade Appsmith from v1.95 to v1.98.
+* MongoDB (27017) and Redis (6379) ports are now reserved in `UIB_INTERNAL_PORT`, preventing accidental conflicts with internal services.
+* Invalid values provided for `UIB_INTERNAL_PORT` are now rejected at container startup to catch misconfiguration early.
+
+[discrete]
+=== Bug fixes
+
+* Fixed an issue where applications created or imported via the REST API did not benefit from ETag/304 HTTP caching, which could cause unnecessary data transfers for API consumers.
+* Fixed a container startup failure when application data is stored in bind-mounted Docker volumes, caused by a missing `git safe.directory` configuration.
+* Fixed an issue where the RTS server could fail to start due to missing executable permissions on its startup script.
+
 == UI Builder 1.3.11 (2026-03-10)
 
 * Fixed static URL feature not working in environment created before UI Builder 1.3.10
@@ -31,6 +48,11 @@ deployment on platforms where a sidecar proxy occupies port 80 (e.g., Kubernetes
 
 * Fixed an issue in production mode that prevented importing applications via the API, introduced in version 1.3.7.
 
+[[v1.3.8-security-fixes]]
+*Security fixes*
+
+* CVE-207: netty-codec - Netty's BrotliDecoder is vulnerable to DoS via zip bomb style attack (public CVE-2025-58057)
+
 
 == UI Builder 1.3.7 (2026-02-09)
 
@@ -46,12 +68,31 @@ In this release we are adding a two new xref:deployment:rest-api.adoc[REST API],
 * Delete single application
 * Update an application
 
+[[v1.3.7-security-fixes]]
+*Security fixes*
+
+* CVE-225: Node.js - Improper Handling of Windows Device Names in path.join Due to Incomplete CVE-2025-23084 Fix (public CVE-2025-27210)
+* CVE-208: Node.js - HTTP/2 HEADERS Frame with Invalid HPACK Triggers Unhandled Error and Denial of Service (public CVE-2025-59465)
+* CVE-204: Node.js - Information Disclosure in Buffer.alloc and TypedArray Instances Due to Interrupted Allocations in vm Module (public CVE-2025-55131)
+* CVE-203: Node.js - Symlink Path Traversal in Permission Model Bypasses --allow-fs-read and --allow-fs-write Restrictions (public CVE-2025-55130)
+* CVE-202: Redis Lua Use-After-Free may lead to remote code execution (public CVE-2025-49844)
+* CVE-198: MongoDB Server - Information Disclosure in Zlib Compressed Protocol Headers Exposes Uninitialized Heap Memory to Unauthe (public CVE-2025-14847)
+* CVE-197: MongoDB Server - Improper WriteUnitOfWork State Management Allows Invariant Failure and Denial of Service (public CVE-2025-10060)
+* CVE-190: libxml2 - Integer Overflow in xmlBuildQName Buffer Size Calculation Leads to Stack Buffer Overflow (public CVE-2025-6021)
+
 
 == UI Builder 1.3.6 (2026-01-30)
 
 * Upgrade Appsmith from v1.90 to v1.93
 * Handle UI proxy external port: NGINX now correctly generates redirect URLs with the external host port
 * Add feature flag to enable or disable zoom controls in deployed applications
+
+[[v1.3.6-security-fixes]]
+*Security fixes*
+
+* CVE-195: cryptography - NULL Pointer Dereference in pkcs12.serialize_key_and_certificates Causes Python Process Crash (public CVE-2024-26130)
+* CVE-184: PyJWT - pyjwt v2.10.1 was discovered to contain weak encryption. (public CVE-2025-45768)
+* CVE-181: python-cryptography -  a remote attacker may decrypt captured messages in TLS servers (public CVE-2023-50782)
 
 == UI Builder 1.3.5 (2025-12-03)
 

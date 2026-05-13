@@ -13,8 +13,7 @@ Introduced in the 2024.3 version, it is the new standard used in the Bonita ecos
 
 
 === How to subscribe?
-Bonita UI Builder is available by default and for no additional cost in all https://www.ofelia.com/pricing[Scale
-subscriptions]. It is also available as a payable add-on in https://www.ofelia.com/pricing[Access subscriptions].
+Bonita UI Builder is available by default and for no additional cost in all https://www.ofelia.com/pricing[Scale subscriptions]. It is also available as a payable add-on in https://www.ofelia.com/pricing[Access subscriptions].
 
 
 === How to use?

@@ -8,12 +8,12 @@
 === What is Bonita UI Builder?
 Bonita UI Builder (sometimes abbreviated UIB) is a development environment used for creating all kinds of interfaces,
 whether they are pages or forms or else; that make up an Application.
-It is a web-based tool launched from a Bonitasoft custom docker image.
+It is a web-based tool launched from a Ofelia custom docker image.
 Introduced in the 2024.3 version, it is the new standard used in the Bonita ecosystem for designing interfaces.
 
 
 === How to subscribe?
-Bonita UI Builder is available by default and for no additional cost in all https://www.bonitasoft.com/pricing[Scale subscriptions]. It is also available as a payable add-on in https://www.bonitasoft.com/pricing[Access subscriptions].
+Bonita UI Builder is available by default and for no additional cost in all https://www.ofelia.com/pricing[Scale subscriptions]. It is also available as a payable add-on in https://www.ofelia.com/pricing[Access subscriptions].
 
 
 === How to use?
@@ -38,14 +38,14 @@ Eventually, Bonita UI Designer will be phased out as we fully transition to Boni
 
 * Continued access: Bonita UI Designer will remain fully operational for an extended period, allowing ample time for adaptation.
 * Support and resources: We offer extensive documentation, tutorials, and support to help you make the most of xref:index.adoc[Bonita UI Builder]
-* Facilitated transition: We are dedicated to facilitating the transition, with detailed guides on how to use Bonita UI Builder, as well as https://www.bonitasoft.com/professional-services/on-demand-services[professional services support]
+* Facilitated transition: We are dedicated to facilitating the transition, with detailed guides on how to use Bonita UI Builder, as well as https://www.ofelia.com/customer-services[professional services support]
 
 
-=== Can I expect any support from Bonitasoft?
+=== Can I expect any support from Ofelia?
 Yes, you can!
 
 * Support and resources: We offer extensive documentation, tutorials, and support to help you make the most of xref:index.adoc[Bonita UI Builder].
-* Facilitated transition: We are dedicated to facilitating the transition, with detailed guides on how to use Bonita UI Builder, as well as https://www.bonitasoft.com/professional-services/on-demand-services[professional services support].
+* Facilitated transition: We are dedicated to facilitating the transition, with detailed guides on how to use Bonita UI Builder, as well as https://www.ofelia.com/customer-services[professional services support].
 
 
 == Versions and Subscriptions

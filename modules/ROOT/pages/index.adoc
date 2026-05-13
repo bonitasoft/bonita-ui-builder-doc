@@ -47,9 +47,10 @@ Bonita also comes with four xref:@bonita:runtime:bonita-applications-interface-o
 
 == Subscription
 
-Bonita UI Builder is available by default and for no additional cost in all https://www.bonitasoft.com/pricing[Scale subscriptions]. It is also available as a payable add-on in https://www.bonitasoft.com/pricing[Access subscriptions].
+Bonita UI Builder is available by default and for no additional cost in all https://www.ofelia.com/pricing[Scale
+subscriptions]. It is also available as a payable add-on in https://www.ofelia.com/pricing[Access subscriptions].
 
-If you haven’t subscribed to a Scale or Access plan yet, please https://www.bonitasoft.com/contact-us[get in touch] with our sales team to start your journey today!
+If you haven’t subscribed to a Scale or Access plan yet, please https://www.ofelia.com/contact-us[get in touch] with our sales team to start your journey today!
 
 If you have already subscribed to a Scale plan or purchased the UI Builder add-on, then start your journey by following our documentation.
 

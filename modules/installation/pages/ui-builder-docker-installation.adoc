@@ -29,6 +29,10 @@ The following environment variables are optional:
 - `UIB_INTERNAL_PORT`: _Since 1.3.9_ The internal HTTP port the UI Builder listens on (default: `80`). Set to a non-80
 value
 when port 80 is already occupied inside the container, for example on Kubernetes platforms where a sidecar proxy binds to port 80. See <<custom-internal-port>> for details.
+- `BONITA_MAX_DECOMPRESSED_ENTRY_SIZE_BYTES`: _Since 1.3.13_ Per-entry cap (in bytes) on the decompressed size of a
+single file when importing a bundle, to guard against ZIP bombs (default: `52428800`, i.e. 50 MB).
+- `BONITA_MAX_DECOMPRESSED_TOTAL_SIZE_BYTES`: _Since 1.3.13_ Cumulative cap (in bytes) on the total decompressed size
+ of an imported bundle, to guard against ZIP bombs (default: `524288000`, i.e. 500 MB).
 
 [NOTE]
 ====

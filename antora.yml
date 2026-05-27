@@ -8,7 +8,7 @@ asciidoc:
     bonitasoft-docker-repository: '{bonitasoft-registry}/docker'
     openApiUrl: 'https://api-documentation.ofelia.com'
     cscRootUrl: 'https://csc.bonitacloud.bonitasoft.com'
-    bonita-ui-builder-version: '1.3.12'
+    bonita-ui-builder-version: '1.3.13'
     bonita-ui-builder-image: '{bonitasoft-docker-repository}/bonita-ui-builder'
     bonita-ui-proxy-image: '{bonitasoft-docker-repository}/bonita-ui-proxy'
     openApiLatestVersion: '0.0.21' # latest compatible version of bonita openApi with this Bonita version

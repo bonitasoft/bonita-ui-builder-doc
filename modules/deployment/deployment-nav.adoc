@@ -1,3 +1,4 @@
 * Deployment
 ** xref:deployment:package-and-deploy-your-application.adoc[Package and Deploy]
 ** xref:deployment:production-packaging.adoc[Production Packaging]
+** xref:deployment:rest-api.adoc[UI builder Rest API]

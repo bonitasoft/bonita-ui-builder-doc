@@ -53,7 +53,7 @@ Retrieve a list of all applications in the default workspace.
 `GET`
 
 ==== URL
-`/uib/api/v1/applications/`
+`/uib/api/v1/applications`
 
 ==== Headers
 
@@ -139,7 +139,7 @@ When `full=true` is specified, each application object contains all fields inclu
 
 [source,bash]
 ----
-curl -X GET 'http://localhost/uib/api/v1/applications/' \
+curl -X GET 'http://localhost/uib/api/v1/applications' \
   --header 'x-requested-by: Appsmith' \
   --header 'Cookie: X-Bonita-API-Token=abc123; JSESSIONID=def456'
 ----
@@ -164,7 +164,7 @@ curl -X GET 'http://localhost/uib/api/v1/applications/' \
 
 [source,bash]
 ----
-curl -X GET 'http://localhost/uib/api/v1/applications/?full=true' \
+curl -X GET 'http://localhost/uib/api/v1/applications?full=true' \
   --header 'x-requested-by: Appsmith' \
   --header 'Cookie: X-Bonita-API-Token=abc123; JSESSIONID=def456'
 ----
@@ -175,7 +175,7 @@ Returns complete application objects with all fields.
 
 [source,bash]
 ----
-curl -X GET 'http://localhost/uib/api/v1/applications/' \
+curl -X GET 'http://localhost/uib/api/v1/applications' \
   --header 'x-requested-by: Appsmith' \
   --header 'Cookie: X-Bonita-API-Token=abc123; JSESSIONID=def456'
 ----
@@ -1407,7 +1407,7 @@ cat exported-apps/MyApplication.json | jq .
 [source,bash]
 ----
 # 1. List applications (optional verification)
-curl -X GET 'http://localhost/uib/api/v1/applications/' \
+curl -X GET 'http://localhost/uib/api/v1/applications' \
   --header 'x-requested-by: Appsmith' \
   --header 'Cookie: X-Bonita-API-Token=xxx; JSESSIONID=xxx'
 
@@ -1429,7 +1429,7 @@ curl -X POST 'http://localhost/uib/api/v1/applications/import-bulk' \
   -F 'file=@backup-20250109.zip'
 
 # 5. Verify restoration
-curl -X GET 'http://localhost/uib/api/v1/applications/' \
+curl -X GET 'http://localhost/uib/api/v1/applications' \
   --header 'x-requested-by: Appsmith' \
   --header 'Cookie: X-Bonita-API-Token=xxx; JSESSIONID=xxx'
 ----

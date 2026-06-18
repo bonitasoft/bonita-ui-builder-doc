@@ -2,6 +2,16 @@
 :page-aliases: ROOT:ui-builder-release-notes.adoc
 :description: This is the release notes for Bonita UI Builder
 
+[[v1.3.14]]
+== UI Builder 1.3.14 (2026-06-18)
+
+[discrete]
+=== Improvements
+
+* UI Builder is now branded as Ofelia: the logo, favicon, datasource icon, and documentation links have been updated to the new identity, and branding assets are now bundled with the product instead of being loaded from an external content delivery network. (BPA-494)
+* The `/import-bulk` REST API now reports every entry of the uploaded ZIP file individually, listing each application with its import status and including the entry name and an error message for any entry that fails instead of silently dropping it, and the HTTP status code now reflects the outcome (200 when all applications import, 206 for partial success, 422 when every entry fails, and 400 when the ZIP contains no application descriptor). (BPA-447)
+
+
 [[v1.3.13]]
 == UI Builder 1.3.13 (2026-05-27)
 

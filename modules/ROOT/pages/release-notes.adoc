@@ -2,16 +2,6 @@
 :page-aliases: ROOT:ui-builder-release-notes.adoc
 :description: This is the release notes for Bonita UI Builder
 
-[[v1.13.14]]
-== UI Builder 1.13.14 (2026-06-15)
-
-[discrete]
-=== Improvements
-
-* The UI Builder interface has been rebranded from Bonitasoft to Ofelia, with updated names, logos, and visual identity throughout the product.
-* The `/import-bulk` REST API endpoint now returns a more detailed response, making it easier to track the outcome of bulk application imports. (BPA-447)
-
-
 [[v1.3.13]]
 == UI Builder 1.3.13 (2026-05-27)
 

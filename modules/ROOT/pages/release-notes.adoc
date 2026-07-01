@@ -17,6 +17,8 @@ suggests the available endpoints filtered by the selected HTTP method, and choos
 * Upgrade Appsmith from v1.98 to v1.99.
 * Fixed an issue on iOS where application canvases were truncated and dropdowns were unreachable because the browser ignored the desktop viewport, leaving the layout too narrow. (BPA-455)
 
+* Upgrade Appsmith from v1.98 to v1.99.
+* The Bonita API query editor now offers autocompletion for API endpoint paths, sourced from the Bonita OpenAPI contract (fetched at runtime and cached). The path field suggests available endpoints filtered by HTTP method, selecting an endpoint automatically populates its required query parameters in the *Params* tab, and parameter keys are autocompleted as well. A new `BONITA_OPENAPI_URL` environment variable on the `bonita-ui-proxy` image points to the OpenAPI contract matching your Bonita version; if it cannot be retrieved, UI Builder falls back to a frozen contract bundled in the image. See xref:installation:ui-builder-docker-installation.adoc#environment-variables[the Docker configuration guide] and xref:development:common-apis-to-use.adoc[Common APIs to use].
 
 [[v1.3.14]]
 == UI Builder 1.3.14 (2026-06-18)

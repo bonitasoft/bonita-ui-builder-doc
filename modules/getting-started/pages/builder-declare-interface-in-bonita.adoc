@@ -6,7 +6,7 @@
 
 == Declare the interface in Bonita application descriptor
 
-The xref:@bonita:applications:ui-designer/application-creation.adoc[Bonita application descriptor] is a file that let you describe all your applications.
+The xref:{bonitaVersion}@bonita:applications:ui-designer/application-creation.adoc[Bonita application descriptor] is a file that let you describe all your applications.
 
 To declare a Bonita UI Builder interface in it, edit it in Studio using the `source` tab.
 In this tab, you will be able to declare your application built and packaged with Bonita UI Builder, using auto-completion with an `applicationLink` XML tag.

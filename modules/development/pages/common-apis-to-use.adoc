@@ -11,7 +11,7 @@ _Since UI Builder 1.3.15_, the Bonita API query editor provides **endpoint autoc
 This feature relies on the Bonita OpenAPI contract configured through the `BONITA_OPENAPI_URL` environment variable. See xref:installation:ui-builder-docker-installation.adoc#environment-variables[the Docker configuration guide] for details.
 ====
 
-Bonita APIs combined with JS objects allow for building all kind of applications, such as: account management dashboard, custom CRM, HR Management tool, invoice processing dashboard, and many more.
+Bonita APIs combined with JS objects allow for building all kinds of applications, such as account management dashboard, custom CRM, HR Management tool, invoice processing dashboard, and many more.
 
 == Commonly used APIs
 
@@ -80,7 +80,7 @@ For example:
     - GET | `/API/bdm/businessData/[businessObject]?q=[query]&p=0&c=10&f=[filterString]=[filterParam]`
     - GET | `/API/bdm/businessData/com.company.model.Claim?c=1000&p=0&q=find`
 
-`q=[query]` is a mandatory parameter. Queries are used to get information about data objects stored in the database. A set of xref:@bonita:data:define-and-deploy-the-bdm.adoc#_queries[default queries], `find` and `find_by`, is defined automatically for each object in the BDM. You can also create custom queries.
+`q=[query]` is a mandatory parameter. Queries are used to get information about data objects stored in the database. A set of xref:{bonitaVersion}@bonita:data:define-and-deploy-the-bdm.adoc#_queries[default queries], `find` and `find_by`, is defined automatically for each object in the BDM. You can also create custom queries.
 
 For more detailed information, refer to the {openApiUrl}/latest/#tag/BusinessDataQuery/operation/searchBusinessData[business data api documentation].
 

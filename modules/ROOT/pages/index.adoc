@@ -38,7 +38,7 @@ Applications are created and operated within Bonita Platform, created with Bonit
 
 They are not standalone elements (such as pages and forms) in a process anymore, which is a paradigm change compared to Bonita UI Designer.
 
-Bonita also comes with four xref:@bonita:runtime:bonita-applications-interface-overview.adoc[Bonita Applications].
+Bonita also comes with four xref:{bonitaVersion}@bonita:runtime:bonita-applications-interface-overview.adoc[Bonita Applications].
 
 “Applications” are very similar to “Living Applications”, which are created with Bonita UI Designer. Once pushed to production, Applications' content cannot be edited.
 

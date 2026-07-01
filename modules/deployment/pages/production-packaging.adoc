@@ -92,7 +92,7 @@ Your applications will then be accessible at `+http://localhost+` or `+http://YO
 
 === Configure and manage Bonita healthcheck settings in a production environment
 
-The xref:@bonita:runtime:healthcheck-mechanism.adoc[Bonita healthcheck] is a mechanism used to monitor the health and availability of Bonita services in production environments.
+The xref:{bonitaVersion}@bonita:runtime:healthcheck-mechanism.adoc[Bonita healthcheck] is a mechanism used to monitor the health and availability of Bonita services in production environments.
 It periodically checks the status of these services to ensure they are functioning properly, helping to identify issues early and maintain system stability.
 
 Changing the default credentials for the healthcheck is crucial for security.

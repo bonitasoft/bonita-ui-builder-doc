@@ -18,6 +18,7 @@ suggests the available endpoints filtered by the selected HTTP method, and choos
 * Fixed an issue on iOS where application canvases were truncated and dropdowns were unreachable because the browser ignored the desktop viewport, leaving the layout too narrow. (BPA-455)
 
 * Upgrade Appsmith from v1.98 to v1.99.
+* Deployed applications can now be forced to render with a desktop viewport through the `BONITA_FORCE_DESKTOP_VIEWPORT` environment variable (disabled by default). When enabled, it prevents mobile browsers from applying their default scaling behavior, so applications designed for desktop keep their intended rendering on mobile devices. See xref:installation:ui-builder-docker-installation.adoc#environment-variables[the installation guide] for details.
 * The Bonita API query editor now offers autocompletion for API endpoint paths, sourced from the Bonita OpenAPI contract (fetched at runtime and cached). The path field suggests available endpoints filtered by HTTP method, selecting an endpoint automatically populates its required query parameters in the *Params* tab, and parameter keys are autocompleted as well. See xref:installation:ui-builder-docker-installation.adoc#environment-variables[the installation guide] to configure the retrieval of the API contract, or xref:development:common-apis-to-use.adoc[Common APIs to use] for more details.
 
 [[v1.3.14]]

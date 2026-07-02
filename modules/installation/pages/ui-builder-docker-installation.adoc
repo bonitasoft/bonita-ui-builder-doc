@@ -35,7 +35,7 @@ single file when importing a bundle, to guard against ZIP bombs (default: `52428
  of an imported bundle, to guard against ZIP bombs (default: `524288000`, i.e. 500 MB).
 - `BONITA_FORCE_DESKTOP_VIEWPORT`: _Since 1.3.15_ Forces a desktop viewport on deployed applications, preventing mobile browsers from applying their default scaling behavior (default: `false`).
 
- [NOTE]
+[NOTE]
 ====
 Reserved ports (do NOT use for **UIB_INTERNAL_PORT**):
 |===

@@ -63,7 +63,7 @@ The xref:production-packaging.adoc#dockerfile[Dockerfile] and more details on ho
 
 [NOTE]
 ====
-This strategy is the most common and recommended way to deploy your application in production. It allows you to be close with the xref:@bonita:getting-started:package-and-deploy-sca-application.adoc[application packaging] strategy.
+This strategy is the most common and recommended way to deploy your application in production. It allows you to be close with the xref:{bonitaVersion}@bonita:getting-started:package-and-deploy-sca-application.adoc[application packaging] strategy.
 ====
 
 ==== 2. Use a default UI Builder image and mount and mounted volume

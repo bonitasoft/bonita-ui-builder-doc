@@ -46,7 +46,7 @@ You can override and configure all xref:ui-builder-docker-installation.adoc#envi
 
 == Download and launch the Docker image
 
-Bonita UI Builder Docker image is located in the xref:@bonita:software-extensibility:bonita-repository-access.adoc[Bonita Artifact Repository].
+Bonita UI Builder Docker image is located in the xref:{bonitaVersion}@bonita:software-extensibility:bonita-repository-access.adoc[Bonita Artifact Repository].
 Once you got the credentials, you have to authenticate with the `docker login` command:
 [source,console,subs="+attributes"]
 ----

@@ -128,7 +128,7 @@ services:
       REMOTE_IP_VALVE_ENABLED: "true"
 ----
 
-If you deploy Bonita Runtime Tomcat bundle instead of the docker container, make sure you xref:@bonita:identity:ssl.adoc#_tomcat_and_ssl_offloading[activate the RemoteIpValve].
+If you deploy Bonita Runtime Tomcat bundle instead of the docker container, make sure you xref:{bonitaVersion}@bonita:identity:ssl.adoc#_tomcat_and_ssl_offloading[activate the RemoteIpValve].
 
 [.troubleshooting-title]
 == Troubleshooting

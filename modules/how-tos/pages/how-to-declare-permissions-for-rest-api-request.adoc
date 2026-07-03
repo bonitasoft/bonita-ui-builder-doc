@@ -9,12 +9,12 @@ It ensures correct access to your production application and its resources by yo
 
 [WARNING]
 ====
-You need to use the setup tool to xref:@bonita:ROOT:bonita-platform-setup.adoc#update_platform_conf[update the configuration files] in order to apply the changes.
+You need to use the setup tool to xref:{bonitaVersion}@bonita:ROOT:bonita-platform-setup.adoc#update_platform_conf[update the configuration files] in order to apply the changes.
 ====
 
 == Grant permissions to Bonita REST API
 
-Check out the xref:@bonita:identity:rest-api-authorization.adoc[REST API authorizations page] in order to understand more about how the permissions are granted.
+Check out the xref:{bonitaVersion}@bonita:identity:rest-api-authorization.adoc[REST API authorizations page] in order to understand more about how the permissions are granted.
 
 === Already initialized Bonita Runtime
 
@@ -27,7 +27,7 @@ For example, if your application makes a request to the API resource `GET /bonit
 
 ==== 2. Retrieve the permissions mapping
 
-You now need to xref:@bonita:identity:rest-api-authorization#resources_permissions_mapping[retrieve the permission mapping] that is needed to perform the requests.
+You now need to xref:{bonitaVersion}@bonita:identity:rest-api-authorization.adoc#resources_permissions_mapping[retrieve the permission mapping] that is needed to perform the requests.
 
 To do so, open the `resources-permissions-mapping.properties` file (located in the folder `/bonita/setup/platform_conf/current`) and check the mapping for the Bonita API resources you identified in the previous step.
 
@@ -49,18 +49,18 @@ It may be more convenient to map permissions to profiles rather than directly to
 
 ==== 4. Push the configuration
 
-With the setup tool, you can now xref:@bonita:ROOT:bonita-platform-setup.adoc#update_platform_conf[update the permissions configuration] in the database using the `setup.sh push` command.
+With the setup tool, you can now xref:{bonitaVersion}@bonita:ROOT:bonita-platform-setup.adoc#update_platform_conf[update the permissions configuration] in the database using the `setup.sh push` command.
 
 === Initial setup (before first startup)
 
-If your Bonita platform has never been started, you can configure the permissions in the  `/bonita/setup/platform_conf/initial` folder to update the xref:@bonita:ROOT:bonita-platform-setup.adoc#init_platform_conf[initial configuration].
+If your Bonita platform has never been started, you can configure the permissions in the  `/bonita/setup/platform_conf/initial` folder to update the xref:{bonitaVersion}@bonita:ROOT:bonita-platform-setup.adoc#init_platform_conf[initial configuration].
 
 == Default Permissions
 
-Some permissions are already set by default and might fit your needs. You can find the default REST API authorizations in this xref:@bonita:identity:api-permissions-overview.adoc[page].
+Some permissions are already set by default and might fit your needs. You can find the default REST API authorizations in this xref:{bonitaVersion}@bonita:identity:api-permissions-overview.adoc[page].
 
 [WARNING]
 ====
-If xref:@bonita:identity:rest-api-authorization.adoc#dynamic_authorization[dynamic authorizations] are defined for the resource, they override the custom permissions for profiles and roles.
+If xref:{bonitaVersion}@bonita:identity:rest-api-authorization.adoc#dynamic_authorization[dynamic authorizations] are defined for the resource, they override the custom permissions for profiles and roles.
 ====
 

@@ -33,6 +33,7 @@ when port 80 is already occupied inside the container, for example on Kubernetes
 single file when importing a bundle, to guard against ZIP bombs (default: `52428800`, i.e. 50 MB).
 - `BONITA_MAX_DECOMPRESSED_TOTAL_SIZE_BYTES`: _Since 1.3.13_ Cumulative cap (in bytes) on the total decompressed size
  of an imported bundle, to guard against ZIP bombs (default: `524288000`, i.e. 500 MB).
+- `BONITA_FORCE_DESKTOP_VIEWPORT`: _Since 1.3.15_ Forces a desktop viewport on deployed applications, preventing mobile browsers from applying their default scaling behavior (default: `false`).
 
 [NOTE]
 ====
@@ -86,6 +87,12 @@ The following environment variables are available to customize the configuration
 - `BONITA_PORT`: Port of the Bonita runtime to which UI Builder will request (default: `8080`).
 - `UIB_HOST`: Host of the UI Builder instance. Use the Docker service name when services are on the same network (e.g., `bonita-ui-builder`).
 - `UIB_PORT`: Internal port of the UI Builder instance (default: `80`). Must match the `UIB_INTERNAL_PORT` value set on the `bonita-ui-builder` container.
+- `BONITA_OPENAPI_URL`: _Since 1.3.15_ URL of the Bonita OpenAPI contract used to power API endpoint autocompletion in the query editor (see xref:development:common-apis-to-use.adoc[Common APIs to use]). By default, it points to the `latest` version of the contract (`{openApiUrl}/latest/openapi.yaml`). To match your Bonita runtime version, set it to the corresponding OpenAPI version. Refer to {openApiUrl} to find the OpenAPI version matching your Bonita version. For example, with Bonita `2025.2`, use OpenAPI version `1.0.6`: `{openApiUrl}/1.0.6/openapi.yaml`.
+
+[NOTE]
+====
+UI Builder fetches the OpenAPI contract from `BONITA_OPENAPI_URL` at runtime and caches it to provide API endpoint autocompletion. If the contract cannot be retrieved (for example in an air-gapped environment), UI Builder runs in degraded mode and falls back to a frozen version of the contract bundled in UI Builder.
+====
 
 To use the provided `bonita-ui-proxy` Docker image without modification, ensure the Bonita runtime is accessible at `http://localhost:8080`.
 

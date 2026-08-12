@@ -7,7 +7,7 @@ asciidoc:
     bonitasoft-registry: 'bonitasoft.jfrog.io'
     bonitasoft-docker-repository: '{bonitasoft-registry}/docker'
     openApiUrl: 'https://api-documentation.ofelia.com'
-    cscRootUrl: 'https://csc.bonitacloud.bonitasoft.com'
+    cscRootUrl: 'https://csc.bonitacloud.ofelia.com'
     bonita-ui-builder-version: '1.3.16'
     bonita-ui-builder-image: '{bonitasoft-docker-repository}/bonita-ui-builder'
     bonita-ui-proxy-image: '{bonitasoft-docker-repository}/bonita-ui-proxy'

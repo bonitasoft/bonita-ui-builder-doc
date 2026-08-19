@@ -31,13 +31,13 @@ Fresh installations (no existing volume) are not affected and can install any ve
 
 The following environment variable is mandatory:
 
-- `BONITA_API_AUTOCOMPLETE`: Enable the Bonita API autocompletion to help you to fill the Bonita request query (default: false)
 - `BONITA_API_URL`: The URL for the Bonita API. This should point to the `bonita-ui-proxy` service (e.g., `+http://bonita-ui-proxy/bonita/API+`) to ensure proper request routing.
 - `APPSMITH_ENCRYPTION_PASSWORD`: The encryption password is critical for safeguarding your datasource credentials through encryption. Set a strong password of your choice that exhibits a good level of entropy to prevent easy decryption.
 - `APPSMITH_ENCRYPTION_SALT`: The encryption salt contributes to the security strategy by adding a layer of complexity during the encryption process. Set a strong salt of your choice in order to make it more resistant to attacks such as brute-force attempts.
 
 The following environment variables are optional:
 
+- `BONITA_API_AUTOCOMPLETE` _Since 1.3.15_ (for development mode only): Enable the Bonita API autocompletion to help you to fill the Bonita request query (default: `false` prior 1.3.17, `true` since 1.3.17).
 - `BONITA_HEALTHCHECK_USER`: Defines the username to request the Bonita healthcheck API (default: `monitoring`).
 - `BONITA_HEALTHCHECK_PASSWORD`: Defines the password to request the Bonita healthcheck API (default: `mon1tor1ng_adm1n`).
 - `BONITA_DEV_MODE`: Enables user to development mode when set to `true` (default: `true`).
@@ -108,6 +108,9 @@ The following environment variables are available to customize the configuration
 - `BONITA_PORT`: Port of the Bonita runtime to which UI Builder will request (default: `8080`).
 - `UIB_HOST`: Host of the UI Builder instance. Use the Docker service name when services are on the same network (e.g., `bonita-ui-builder`).
 - `UIB_PORT`: Internal port of the UI Builder instance (default: `80`). Must match the `UIB_INTERNAL_PORT` value set on the `bonita-ui-builder` container.
+- `UIB_NPM_REDIRECT` _Since 1.3.17_: Controls how requests to `/npm/...` are answered (default: `off`). Safari resolves the module preloads advertised by public content delivery networks such as jsDelivr against the application domain instead of the delivery network (https://bugs.webkit.org/show_bug.cgi?id=269635[WebKit bug 269635], Safari 17 to 26.6), which sends hundreds of unwanted requests per widget load to UI Builder. These requests are always answered by the proxy itself, before authentication, so they never reach the Bonita runtime. With `off` they are answered with a `404` and logged; set it to `on` to redirect them to the content delivery network instead, so that the preloads are used rather than wasted.
+- `UIB_NPM_CDN` _Since 1.3.17_: Origin the redirection points at, which can be a private mirror (default: `https://cdn.jsdelivr.net`). A trailing slash is ignored. Ignored when `UIB_NPM_REDIRECT` is `off`.
+- `UIB_NPM_CACHE_CONTROL` _Since 1.3.17_: Value of the `Cache-Control` header set on the redirect response, so that browsers can reuse it instead of asking again on every load (default: empty, no header is sent). Ignored when `UIB_NPM_REDIRECT` is `off`.
 - `BONITA_OPENAPI_URL`: _Since 1.3.15_, in _Development only_. URL of the Bonita OpenAPI contract used to power API endpoint autocompletion in the query editor (see xref:development:common-apis-to-use.adoc[Common APIs to use]).
 ** By default, it points to the `latest` version of the contract (`{openApiUrl}/latest/openapi.yaml`).
 ** To match your Bonita runtime version, set it to the corresponding OpenAPI version. Refer to {openApiUrl} to find the OpenAPI version matching your Bonita version. For example, with Bonita `2025.2`, use OpenAPI version `1.0.6`: `{openApiUrl}/1.0.6/openapi.yaml`.

@@ -2,6 +2,41 @@
 :page-aliases: ROOT:ui-builder-release-notes.adoc
 :description: This is the release notes for Bonita UI Builder
 
+[[v1.3.17]]
+== UI Builder 1.3.17 (2026-08-XX)
+
+This release embeds a major Appsmith version bump (v1.99 to v2.3), which raises the version of the underlying MongoDB database.
+
+[IMPORTANT]
+====
+If you run a version *older than 1.3.12* and have *persistent MongoDB data* (a mounted volume), you must upgrade to *1.3.12 before upgrading to any later version*.
+
+Skipping this version causes MongoDB to fail to start in subsequent releases.
+
+.Why?
+[%collapsible]
+=====
+Version 1.3.12 upgrades the bundled MongoDB Feature Compatibility Version (FCV) to 6.
+Later versions require MongoDB 7, which refuses to open a database still at FCV 5.
+Upgrading through 1.3.12 performs this FCV migration automatically.
+=====
+
+Fresh installations (no existing volume) are not affected and can install any version directly.
+====
+
+[discrete]
+=== Improvements
+
+* Upgrade Appsmith from v1.99 to v2.3. Among the changes: a new Card widget to display entities with a composable body canvas, label styling options for the Button widget, the ability to copy an API, a query, or a JS object across applications, and several security fixes.
+* Bonita API calls made by an application now carry the end user's IP address and browser user agent in the dedicated `X-Bonita-Client-Ip` and `X-Bonita-Client-User-Agent` headers, so that Bonita audit logging records the actual end user instead of the UI Builder server. (EVOL-174)
+
+[discrete]
+=== Bug fixes
+
+* Fixed blank pages on iPhone and iPad in applications loading JavaScript libraries from a public content delivery network: Safari resolved the dependency preloads of those libraries against the application domain, sending hundreds of extra requests per widget load to UI Builder and saturating Bonita. The reverse proxy now answers these requests directly, before authentication, which is what restores the page. They are discarded by default; setting the new `UIB_NPM_REDIRECT` environment variable to `on` redirects them to the content delivery network instead, so that the preloads are used rather than wasted. `UIB_NPM_CDN` and `UIB_NPM_CACHE_CONTROL` tune that redirect. See xref:installation:ui-builder-docker-installation.adoc#environment-variables[the Docker configuration guide]. (BCLD-3163)
+* Fixed the Bonita API autocompletion being disabled in Docker deployments unless `BONITA_API_AUTOCOMPLETE` was explicitly set to `true`. It is now active out of the box, and can still be turned off by setting the variable to `false`.
+
+
 [[v1.3.16]]
 == UI Builder 1.3.16 (2026-07-23)
 

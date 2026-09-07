@@ -45,6 +45,13 @@ The following environment variables are optional:
 - `LOGGING_LEVEL_COM_APPSMITH`: Sets the logging level for Appsmith components (default: `debug`).
 - `LOGGING_LEVEL_COM_BONITASOFT`: Sets the logging level for UIB components (default: `debug`).
 - `LOGGING_LEVEL_COM_EXTERNAL_PLUGINS`: Sets the logging level for external plugins (default: `debug`).
+- `LOGGING_PATTERN_CONSOLE`: Logback pattern used for the backend log lines (default: `+[%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX}] [%thread] [%5p] %logger{36} - %msg%n+`). _Since 1.3.18_ the default carries milliseconds and the zone offset, so that two events of the same second can be ordered and the timestamps can be compared with anything collected elsewhere.
+- `LOGGING_STRUCTURED_FORMAT_CONSOLE`: Logs the backend as JSON instead of plain text, one object per event (`logstash`, `ecs` or `gelf`; unset by default). Recommended when a log collection system ingests the logs, so that every field is queryable and a stack trace stays inside the event that produced it instead of being split into one entry per stack-trace line. See <<structured-logs>> for details.
+- `LOGGING_STRUCTURED_JSON_STACKTRACE_ROOT`: Prints the root cause `first` or `last` in a stack trace (default: `last`). Applies only when `LOGGING_STRUCTURED_FORMAT_CONSOLE` is set, as do the four variables below.
+- `LOGGING_STRUCTURED_JSON_STACKTRACE_INCLUDEHASHES`: Adds a fingerprint of each stack trace, so that a collector can group repeated occurrences of the same exception (default: `false`).
+- `LOGGING_STRUCTURED_JSON_STACKTRACE_MAXTHROWABLEDEPTH`: Caps the number of frames printed for each throwable of the chain (default: unlimited).
+- `LOGGING_STRUCTURED_JSON_STACKTRACE_MAXLENGTH`: Caps the number of characters of a stack trace (default: unlimited).
+- `LOGGING_STRUCTURED_JSON_STACKTRACE_INCLUDECOMMONFRAMES`: Keeps the frames a throwable shares with the one wrapping it (default: `false`).
 - `BONITA_APPLICATION_EXPORT_PATH`: Internal Path to export Bonita UIB Application from Bonita Runtime (default: `/opt/appsmith/workspace/app/exports/`).
 - `BONITA_ENABLE_ZOOM`: _Since 1.3.6_ Enables zoom in deployed applications when set to `true` (default: `false`).
 - `UIB_INTERNAL_PORT`: _Since 1.3.9_ The internal HTTP port the UI Builder listens on (default: `80`). Set to a non-80
@@ -129,6 +136,34 @@ If you want to see our custom Nginx configuration used in this image, run this c
 docker run --rm {bonita-ui-proxy-image} \
     cat /etc/nginx/templates/nginx.conf.template
 ----
+
+[[structured-logs]]
+== Structured JSON logs
+
+The container writes one JSON object per line on its standard output, whatever the format of the backend log lines is. Each line carries the time of the event (`@timestamp`), its `message` and `level`, the service and the stream it came from (`process` and `channel`), and a `seq` number ordering the lines that share the same millisecond. Stack traces are attached to the event that produced them, in a `stack_trace` field, instead of becoming one entry per stack-trace line.
+
+The backend itself logs plain text lines, formatted by `LOGGING_PATTERN_CONSOLE`, which is the easiest format to read yourself. When a log collection system ingests the logs, log the backend as JSON instead:
+
+[source,yaml]
+----
+bonita-ui-builder:
+  environment:
+    LOGGING_STRUCTURED_FORMAT_CONSOLE: logstash
+    LOGGING_STRUCTURED_JSON_STACKTRACE_ROOT: first
+    LOGGING_STRUCTURED_JSON_STACKTRACE_INCLUDEHASHES: "true"
+    LOGGING_STRUCTURED_JSON_STACKTRACE_MAXTHROWABLEDEPTH: "30"
+----
+
+Every field of an event then becomes a queryable attribute, and `@timestamp`, `message` and `level` are the names most collectors map on their own.
+
+[NOTE]
+====
+Structured logging requires UI Builder 1.3.15 or later. On earlier versions these variables are ignored without any error.
+
+The variable names drop the hyphens of the underlying property name rather than turning them into underscores: `logging.structured.json.stacktrace.max-throwable-depth` becomes `LOGGING_STRUCTURED_JSON_STACKTRACE_MAXTHROWABLEDEPTH`. A name written with an extra underscore binds to nothing and is silently ignored.
+====
+
+The log files under `/appsmith-stacks/logs/` are not in that shape: they hold the raw output of each process, as the process wrote it.
 
 [[custom-internal-port]]
 == Custom internal port (Kubernetes / sidecar proxy)

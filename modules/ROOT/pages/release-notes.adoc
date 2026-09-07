@@ -2,6 +2,20 @@
 :page-aliases: ROOT:ui-builder-release-notes.adoc
 :description: This is the release notes for Bonita UI Builder
 
+[[v1.3.18]]
+== UI Builder 1.3.18 (2026-09-07)
+
+[discrete]
+=== Improvements
+
+* Container logs are now directly usable by log collection systems: every record carries its own event time, its level and its message under the field names those systems map by default, a sequence number that orders records emitted within the same millisecond, and a complete stack trace in a single record instead of one record per frame. The default log pattern now also uses an unambiguous ISO-8601 instant, with millisecond precision and time zone, instead of a date and time with second precision only. (BCLD-2263)
+
+[discrete]
+=== Bug fixes
+
+* Fixed log lines being lost or split in container logs: a line read in two parts is now reassembled into a single record, and a message that is itself structured data no longer overwrites the fields of the record carrying it, which could leave that record with no text at all. (BCLD-2263)
+
+
 [[v1.3.17]]
 == UI Builder 1.3.17 (2026-08-21)
 

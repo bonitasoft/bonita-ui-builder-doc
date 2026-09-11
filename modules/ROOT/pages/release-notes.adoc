@@ -7,15 +7,6 @@
 
 This release embeds an Appsmith version bump (v2.3 to v2.4).
 
-[IMPORTANT]
-====
-*Appsmith AI datasources reach end of life on 30 September 2026.*
-
-New Appsmith AI connections and queries can no longer be created, and the existing ones stop working after that date, whether or not you upgrade.
-
-Migrate any remaining Appsmith AI query to a direct provider datasource (OpenAI, Anthropic or Google AI). This release refreshes the model list of these three providers, so the current models are available to migrate onto.
-====
-
 [discrete]
 === Improvements
 

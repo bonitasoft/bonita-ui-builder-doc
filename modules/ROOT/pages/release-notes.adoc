@@ -2,6 +2,32 @@
 :page-aliases: ROOT:ui-builder-release-notes.adoc
 :description: This is the release notes for Bonita UI Builder
 
+[[v1.3.19]]
+== UI Builder 1.3.19 (2026-09-11)
+
+This release embeds an Appsmith version bump (v2.3 to v2.4).
+
+[IMPORTANT]
+====
+*Appsmith AI datasources reach end of life on 30 September 2026.*
+
+New Appsmith AI connections and queries can no longer be created, and the existing ones stop working after that date, whether or not you upgrade.
+
+Migrate any remaining Appsmith AI query to a direct provider datasource (OpenAI, Anthropic or Google AI). This release refreshes the model list of these three providers, so the current models are available to migrate onto.
+====
+
+[discrete]
+=== Improvements
+
+* Upgrade Appsmith from v2.3 to v2.4. Among the changes: sensitive values are now masked in the administration settings, where the MongoDB and Redis URLs are replaced by a read-only connection status, Microsoft SQL Server datasources can open read-only connections, the evaluated value popup keeps a compact collapsed view, required-field markers are restored on the legacy Select, MultiSelect and Tree Select widgets, and several reliability and security fixes.
+
+[discrete]
+=== Bug fixes
+
+* Fixed the most recent container log records being lost when a container is stopped abruptly: each record is now written out as soon as it is produced, instead of waiting in an output buffer. (BCLD-2263)
+* Fixed a container log line whose content cannot be decoded being merged with the lines that follow it. (BCLD-2263)
+
+
 [[v1.3.18]]
 == UI Builder 1.3.18 (2026-09-07)
 

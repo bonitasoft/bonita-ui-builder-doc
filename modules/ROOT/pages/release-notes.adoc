@@ -18,7 +18,7 @@ This release embeds an Appsmith version bump (v2.4 to v2.4.2).
 === Bug fixes
 
 * Fixed Bonita API calls made through `host.docker.internal` on Docker Desktop being rejected with a `Host ... is disallowed` error since version 1.3.19: UI Builder now uses IPv4 only for its network connections.
-
+* Disabled the BetterBugs third-party script by default, so it is no longer loaded on every end-user page. (BPA-891)
 
 [[v1.3.19]]
 == UI Builder 1.3.19 (2026-09-11)

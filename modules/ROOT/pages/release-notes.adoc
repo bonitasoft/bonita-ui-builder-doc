@@ -2,6 +2,24 @@
 :page-aliases: ROOT:ui-builder-release-notes.adoc
 :description: This is the release notes for Bonita UI Builder
 
+[[v1.3.20]]
+== UI Builder 1.3.20 (2026-09-24)
+
+This release embeds an Appsmith version bump (v2.4 to v2.4.2).
+
+[discrete]
+=== Improvements
+
+* Upgrade Appsmith from v2.4 to v2.4.2. Among the changes: the OAuth2 token expiry field of REST API datasources is now displayed next to the scopes field, page cloning is faster and more reliable, column names used in query filters are now validated, and several security fixes.
+* The `bonita-ui-proxy` access logs can now record the end user's IP address when another proxy, such as an ingress controller or a load balancer, sits in front of it: set the new `NGINX_TRUSTED_PROXY_CIDR` environment variable to the narrowest address block that front proxy connects from. Nothing changes for deployments that do not set it. (EVOL-175)
+* The third-party BetterBugs scripts are no longer loaded by default in application pages, which removes calls to an external service on every page load. (BPA-891)
+
+[discrete]
+=== Bug fixes
+
+* Fixed Bonita API calls made through `host.docker.internal` on Docker Desktop being rejected with a `Host ... is disallowed` error since version 1.3.19: UI Builder now uses IPv4 only for its network connections.
+
+
 [[v1.3.19]]
 == UI Builder 1.3.19 (2026-09-11)
 

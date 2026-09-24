@@ -2,6 +2,22 @@
 :page-aliases: ROOT:ui-builder-release-notes.adoc
 :description: This is the release notes for Bonita UI Builder
 
+[[v1.3.20]]
+== UI Builder 1.3.20 (Work in progress)
+
+[discrete]
+=== Improvements
+
+* In the `bonita-ui-proxy` access logs, the end-user IP address can now be resolved into `$remote_addr` even when a front proxy (ingress controller, load balancer, another Nginx) sits in front of UI Builder. Set the new `NGINX_TRUSTED_PROXY_CIDR` environment variable to that proxy's CIDR block; deployments without a front proxy need no change. See xref:installation:ui-builder-docker-installation.adoc#environment-variables[the Docker configuration guide]. (EVOL-175)
+* Upgrade Appsmith from v2.4 to v2.4.1 (maintenance release, no feature flag changes).
+
+[discrete]
+=== Bug fixes
+
+* Fixed Bonita datasource calls through `host.docker.internal` on Docker Desktop being rejected with a `Host ... is disallowed` error since UI Builder 1.3.19: Docker Desktop's host gateway resolves to both an IPv4 and an incidental IPv6 address, and the SSRF filter rejected the whole resolution as soon as one of the resolved addresses was blocked, even though the IPv4 one was valid.
+* Disabled the BetterBugs third-party script by default, so it is no longer loaded on every end-user page. (BPA-891)
+
+
 [[v1.3.19]]
 == UI Builder 1.3.19 (2026-09-11)
 

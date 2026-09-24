@@ -3,7 +3,7 @@
 :description: This is the release notes for Bonita UI Builder
 
 [[v1.3.20]]
-== UI Builder 1.3.20 (2026-09-24)
+== UI Builder 1.3.20 (Work in progress)
 
 [discrete]
 === Improvements

@@ -62,6 +62,7 @@ single file when importing a bundle, to guard against ZIP bombs (default: `52428
 - `BONITA_MAX_DECOMPRESSED_TOTAL_SIZE_BYTES`: _Since 1.3.13_ Cumulative cap (in bytes) on the total decompressed size
  of an imported bundle, to guard against ZIP bombs (default: `524288000`, i.e. 500 MB).
 - `BONITA_FORCE_DESKTOP_VIEWPORT`: _Since 1.3.15_ Forces a desktop viewport on deployed applications, preventing mobile browsers from applying their default scaling behavior (default: `false`).
+- `BONITA_APP_BASE_PATH` _Since 1.3.21_: Path segment used for deployed/published application URLs, i.e. `/<segment>/...` (default: `app`). Change this if your reverse proxy already routes `/app` to another application. Must be set to the *same value* on the `bonita-ui-proxy` image below, so that the URLs built by the frontend match the ones Nginx routes. See <<app-base-path>> for details.
 
 [NOTE]
 ====
@@ -114,6 +115,7 @@ The following environment variables are available to customize the configuration
 - `NGINX_EXTERNAL_PORT`: The external port used to access Nginx from outside the container. Set this to match the host port mapping in your `docker-compose.yml` when using a non-standard port (default: `80`). For example, if you map port 8888 on the host to port 80 in the container (`8888:80`), set this variable to `8888`.
 - `BONITA_HOST`: Host of the Bonita runtime to which UI Builder will request (default: `host.docker.internal`).
 - `BONITA_PORT`: Port of the Bonita runtime to which UI Builder will request (default: `8080`).
+- `BONITA_APP_BASE_PATH` _Since 1.3.21_: Path segment used for deployed/published application URLs, i.e. `/<segment>/...` (default: `app`). Must be set to the *same value* as on the `bonita-ui-builder` image above. See <<app-base-path>> for details.
 - `UIB_HOST`: Host of the UI Builder instance. Use the Docker service name when services are on the same network (e.g., `bonita-ui-builder`).
 - `UIB_PORT`: Internal port of the UI Builder instance (default: `80`). Must match the `UIB_INTERNAL_PORT` value set on the `bonita-ui-builder` container.
 - `UIB_NPM_REDIRECT` _Since 1.3.17_: Controls how requests to `/npm/...` are answered (default: `off`). Safari resolves the module preloads advertised by public content delivery networks such as jsDelivr against the application domain instead of the delivery network (https://bugs.webkit.org/show_bug.cgi?id=269635[WebKit bug 269635], Safari 17 to 26.6), which sends hundreds of unwanted requests per widget load to UI Builder. These requests are always answered by the proxy itself, before authentication, so they never reach the Bonita runtime. With `off` they are answered with a `404` and logged; set it to `on` to redirect them to the content delivery network instead, so that the preloads are used rather than wasted.
@@ -137,6 +139,35 @@ If you want to see our custom Nginx configuration used in this image, run this c
 docker run --rm {bonita-ui-proxy-image} \
     cat /etc/nginx/templates/nginx.conf.template
 ----
+
+[[app-base-path]]
+== Configurable application base path
+
+By default, UI Builder serves deployed/published applications under the `/app/...` path segment. If your reverse proxy already routes `/app` to another application, set `BONITA_APP_BASE_PATH` to a different segment (e.g. `uib-app`) on *both* the `bonita-ui-builder` and `bonita-ui-proxy` images — the frontend builds the application URLs and Nginx routes them, so the two must agree.
+
+[WARNING]
+====
+Changing this value on an instance already in production invalidates previously shared or bookmarked application URLs. Treat it as a deliberate, planned change rather than a hot-swap.
+====
+
+[NOTE]
+====
+Bonita's own App Directory links to applications it knows as an `applicationLink` using a fixed `/app/<token>` URL, independent of UI Builder. `BONITA_APP_BASE_PATH` only changes the URLs UI Builder itself builds (direct/bookmarked links, the guest sign-in redirect) — it has no effect on that native entry point.
+
+To let other pages discover the configured segment instead of assuming `/app`, `bonita-ui-proxy` serves it, unauthenticated, at:
+
+[source,console]
+----
+GET /bonita-app-base-path.json
+----
+
+[source,json]
+----
+{"appBasePath": "app"}
+----
+
+This endpoint is served directly by Nginx, with no `proxy_pass` to the `bonita-ui-builder` backend, so it stays reachable even if that container is down.
+====
 
 [[structured-logs]]
 == Structured JSON logs

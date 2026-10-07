@@ -93,7 +93,7 @@ Update `nginx.conf` file and modify the `proxy_cookie_path` directive for the lo
 ----
 proxy_cookie_path /bonita "/; Secure";
 ----
-Also add the following line to the locations `~* ^/app/([^?/#]+)` and `\`:
+Also add the following line to the locations `~* ^/app/([^?/#]+)` (or your configured `BONITA_APP_BASE_PATH` segment — see xref:installation:ui-builder-docker-installation.adoc#app-base-path[Configurable application base path]) and `\`:
 [source]
 ----
 proxy_cookie_path / "/; secure";

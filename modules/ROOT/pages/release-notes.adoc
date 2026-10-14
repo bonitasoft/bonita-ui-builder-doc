@@ -2,6 +2,23 @@
 :page-aliases: ROOT:ui-builder-release-notes.adoc
 :description: This is the release notes for Bonita UI Builder
 
+[[v1.3.21]]
+== UI Builder 1.3.21 (2026-10-14)
+
+This release embeds an Appsmith version bump (v2.4.2 to v2.5.0).
+
+[IMPORTANT]
+====
+* Applications exported from this version use a newer export format and cannot be imported into an older UI Builder version.
+* When you change a connection setting of a datasource (for example its URL or host), you must enter its credentials again. Datasources whose connection settings are unchanged keep their saved credentials.
+====
+
+[discrete]
+=== Improvements
+
+* The path segment used in deployed application URLs, `/app/` by default, can now be changed with the new `BONITA_APP_BASE_PATH` environment variable, for deployments where the reverse proxy already routes `/app` to another application. Set it to the same value on both the `bonita-ui-builder` and `bonita-ui-proxy` images. Nothing changes for deployments that do not set it. See xref:installation:ui-builder-docker-installation.adoc#app-base-path[Configurable application base path]. (BPA-201)
+* Upgrade Appsmith from v2.4.2 to v2.5.0. Among the changes: optional header wrapping and header font styling for Table widget columns, a *Disable selection* option for the List widget, a font-family control in the Rich Text Editor toolbar, more useful error messages when a query fails, browser Back and Forward navigation now refreshing `appsmith.URL` and URL-driven widget values, restored search, filtering and sorting on Table widget HTML columns, and several security fixes.
+
 [[v1.3.20]]
 == UI Builder 1.3.20 (2026-09-24)
 

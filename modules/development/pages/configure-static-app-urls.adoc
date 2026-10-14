@@ -31,6 +31,11 @@ You get a clean, readable URL:
 https://mycompany.com/app/expense-tracker/dashboard
 ----
 
+[NOTE]
+====
+The `app` segment shown above is the default. It can be changed per instance via the `BONITA_APP_BASE_PATH` environment variable — see xref:installation:ui-builder-docker-installation.adoc#app-base-path[Configurable application base path].
+====
+
 == Configure the application slug
 
 To set a custom slug for your application:

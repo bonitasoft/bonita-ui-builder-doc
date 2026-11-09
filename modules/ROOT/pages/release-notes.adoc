@@ -2,6 +2,22 @@
 :page-aliases: ROOT:ui-builder-release-notes.adoc
 :description: This is the release notes for Bonita UI Builder
 
+[[v1.3.22]]
+== UI Builder 1.3.22 (2026-11-09)
+
+This release embeds an Appsmith version bump (v2.5.0 to v2.6.0).
+
+[IMPORTANT]
+====
+* A customized `docker.env` file in the persistent volume must now contain resolved literal values only: shell expressions such as `$VAR` or `$(...)` stop the container at startup. Set such values, including JVM options, through Docker Compose or Kubernetes environment variables instead.
+* Redis queries must use a static command name: a binding in the command name now returns a query configuration error, and bound values are always passed as a single command argument.
+====
+
+[discrete]
+=== Improvements
+
+* Upgrade Appsmith from v2.5.0 to v2.6.0. Among the changes: the *Show logo* and *Show application title* navigation settings no longer switch themselves while a save is in progress, Phone Input and JSON Form phone fields keep the correct country when several countries share a dial code, legacy widgets with a *Required* toggle consistently show a required marker, the editor no longer reports false undefined-variable errors for `Blob`, `File`, `FormData`, `URL` and text encoders, Map widgets work again for anonymous viewers of public applications, saving datasource credentials now takes effect immediately on every server instance, and several security fixes, including a fix for a Node.js Brotli decoder vulnerability (CVE-2026-111497).
+
 [[v1.3.21]]
 == UI Builder 1.3.21 (2026-10-14)
 

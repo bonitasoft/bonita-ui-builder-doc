@@ -2,6 +2,23 @@
 :page-aliases: ROOT:ui-builder-release-notes.adoc
 :description: This is the release notes for Bonita UI Builder
 
+[[v1.3.23]]
+== UI Builder 1.3.23 (2026-11-16)
+
+This release embeds an Appsmith version bump (v2.6.0 to v2.7.0).
+
+[IMPORTANT]
+====
+* `navigateTo` with a page name that no longer exists now fails with "Enter a valid URL or page name", instead of opening the name as a web address. Use a full URL to navigate to an external address.
+* Turning on *Make application forkable* now requires export permission on the application.
+* S3-compatible and DynamoDB datasources now follow the restricted host policy: a datasource whose endpoint host is blocked fails to save, test or run with `Host not allowed.`
+====
+
+[discrete]
+=== Improvements
+
+* Upgrade Appsmith from v2.6.0 to v2.7.0. Among the changes: an *Auto Height* option for the Table widget, which grows to fit the chosen number of rows per page, *Show share* and *Show all apps* navigation settings to hide those buttons in published applications, a *Select All* option in every section of the page export dialog, tooltips on Button Group buttons, a *Title font color* setting for the JSON Form widget, plain text instead of raw HTML for HTML columns in Table CSV and Excel downloads, several Table and JSON Form fixes, and several security fixes.
+
 [[v1.3.22]]
 == UI Builder 1.3.22 (2026-11-09)
 

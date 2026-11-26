@@ -2,6 +2,28 @@
 :page-aliases: ROOT:ui-builder-release-notes.adoc
 :description: This is the release notes for Bonita UI Builder
 
+[[v1.3.24]]
+== UI Builder 1.3.24 (2026-11-26)
+
+This release embeds an Appsmith version bump (v2.7.0 to v2.7.2).
+
+[IMPORTANT]
+====
+* The `APPSMITH_ALLOWED_FRAME_ANCESTORS` setting must now be a list of valid CSP `frame-ancestors` source expressions: an invalid saved value is served as `'self'` after the next restart, which blocks embedding the application in other sites, and saving an invalid value is rejected.
+* Git no longer commits an application while one of its page names is not a single path segment, such as a name containing `/`: rename the page first. Creating or renaming a page with such a name is now rejected.
+====
+
+[discrete]
+=== Improvements
+
+* Upgrade Appsmith from v2.7.0 to v2.7.2. Among the changes: the bundled Java runtime moves to Eclipse Temurin 25.0.5.1 to fix the "Java4Shell" vulnerability (CVE-2026-114938), Table CSV downloads save cells as text so they can no longer run as spreadsheet formulas, the File Picker upload dialog follows the application language, OAuth2 authorization-code login uses the datasource's self-signed certificate setting for the token exchange, importing an application no longer drops datasources or JavaScript libraries created at the same time, the Currency Input widget adds the BYN, VES and ZMW currencies, pressing Enter in a JSON Form with a single text field no longer reloads the page, the instance logo in *Admin Settings > Branding* now accepts PNG and JPG only, and several security fixes.
+* The `bonita-ui-proxy` image now uses the nginx 1.30 stable branch, with OpenSSL 3.5, instead of the end-of-life nginx 1.27 branch.
+
+[discrete]
+=== Bug fixes
+
+* Fixed SAML login in the SSO examples with the upcoming Bonita maintenance versions: the identity provider `entityID` in `keycloak-saml.xml` is now set to the Keycloak realm issuer, so that Bonita no longer rejects the SAML responses with a 403 error. Existing environments need a fresh database to pick up the new value.
+
 [[v1.3.23]]
 == UI Builder 1.3.23 (2026-11-16)
 
